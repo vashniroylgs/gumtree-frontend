@@ -1,0 +1,131 @@
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #0d475c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  justify-content: center;
+}
+.header-mini-container {
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-logo-container {
+  display: flex;
+}
+
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header__searchPropertyInput {
+  height: 40px;
+  border: none;
+  width: 60%;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.header__searchLocationInput {
+  height: 40px;
+  border: none;
+  width: 25%;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  padding-left: 15px;
+}
+
+.header-search-pipe-container {
+  background-color: white;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.header-search-pipe-icon {
+  font-size: 25px;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.header__searchIcon-contianer {
+  height: 42px !important;
+  background-color: #e75462;
+  color: white;
+  border-radius: 50%;
+  right: 30px;
+  width: 40px;
+  top: 50%;
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__searchIcon {
+  height: 22px !important;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.headerOptionsIcon {
+  width: 85px;
+  height: 25px;
+}
+
+.headerOptionPara {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}

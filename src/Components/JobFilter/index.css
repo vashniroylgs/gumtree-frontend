@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+    font-family:"Roboto";
+}
+
+.job-filters-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding:1.5%;
+    border:1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width:14%;
+    min-width:max-content;
+    height:max-content;
+  }
+  .job-filter-heading {
+    margin: 0;
+    font-family: 'Roboto';
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    margin:0px;
+    padding:0px;
+  }
+  .job-filter-location-type-container{
+    border:1px solid grey;
+    padding:3px 4px;
+    background-color:#fff;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border-radius:4px;
+  }
+.job-filter-location-icon{
+    font-size:28px;
+    color:grey;
+}
+.job-filter-location-search-container{
+    border:none;
+    color:grey;
+    font-size:16px;
+    width:100%;
+    outline:none;
+}
+.job-filter-choose-distance-main-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.job-filter-choose-distance-container{
+    padding:8px 10px;
+    font-size:16px;
+    border:1px solid grey;
+    border-radius:4px;
+    width:70%;
+}
+.job-filter-choose-distance-update-button{
+    padding:8px 10px;
+    color:#fff;
+    font-size:16px;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    background-color:#498124;
+    border:none;
+}
+
+.job-filter-horizontal-line{
+    border:0.2px solid grey;
+    width:100%;
+    opacity:0.4;
+}
+
+  .job-filters-list {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+  }
+  .job-filter-all-category-container{
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .job-filter-all-category-icon{
+    font-size:24px;
+    color:#007FB0;
+  }
+  .job-filter-all-category-names{
+    font-size:16px;
+    color:#007FB0;
+    margin:0px;
+  }
+  .job-filter-job-type-heading{
+    font-size:16px;
+    margin:0px;
+  }
+  .job-filter-jobs-section-container-list{
+    list-style-type: none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:0px;
+    padding:0px 0px 0px 20px;
+  }
+  .job-filter-jobs-section-item{
+    display:flex;
+    gap:4px;
+    align-items:center;
+    justify-content: space-between;
+  }
+  .job-filter-job-section-name{
+    font-size:16px;
+    color:#007FB0;
+    margin:0px;
+    width:60%;
+  }
+  .job-filter-jobs-section-posts{
+    color:grey;
+    font-size:16px;
+    margin:0px;
+  }
+  .job-filter-select-salary-container{
+    padding:8px 10px;
+    font-size:16px;
+    border:1px solid grey;
+    border-radius:4px;
+    width:100%;
+  }

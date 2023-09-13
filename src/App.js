@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Components/HomePage";
+import Property from "./Components/PropertyPage";
+import Electronics from "./Components/ElectronicsPage";
+import Homefooter from "./Components/Footer";
+import Header from "./Components/Header";
+import Categories from "./Components/Categories";
+import AutoMobiles from "./Components/Automobiles/Home";
+import Freelancing from "./Components/Freelance";
+import JobSectionMain from "./Components/JobSectionMain";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Categories />
+      <Routes>
+        <Route exact path="/" Component={HomePage} />
+        <Route exact path="/properties" Component={Property} />
+        <Route exact path="/electronics" Component={Electronics} />
+        <Route exact path="/automobiles"  Component={AutoMobiles} />
+        <Route exact path="/freelancing" Component={Freelancing} />
+        <Route exact path="/jobs" Component={JobSectionMain}/>
+      </Routes>
+      <Homefooter />
+    </>
   );
 }
 

@@ -1,0 +1,29 @@
+.propertites-un-ordered-list-contianer {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  align-items: center;
+}
+
+.link-css{
+    text-decoration: none;
+    color: black;
+}
+
+.propertites-list-item{
+    border: 1px solid #d8d6d9;
+    width: 30%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.propertites-list-item:hover{
+    text-decoration: underline;
+    border-bottom: none;
+}

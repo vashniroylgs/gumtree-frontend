@@ -1,0 +1,115 @@
+/* Homefooter.css */
+
+/* Set the background color for the entire page */
+
+
+/* Styles for the main footer section */
+.footer {
+  background-color: #333;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow columns to wrap to the next row on smaller screens */
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px; /* Add some spacing between columns */
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  flex: 1;
+}
+
+.social-icons img {
+  width: 200px; /* Adjust the width of the logo image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the horizontal separator line */
+.footer-separator {
+  border: none; /* Remove default border */
+  border-top: 1px solid #c1bebecc; /* Add a 1px solid line with your desired color */
+  margin: 20px 0; /* Add margin to separate it from content above and below */
+  background-color: #333;
+}
+
+/* Styles for the second section */
+.second {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.second .footer-column {
+  flex: 1;
+  /* Add some spacing between columns */
+}
+
+.second h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Additional styles for social media icons */
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px; /* Adjust the icon size as needed */
+  margin-right: 10px;
+}
+
+/* Styles for the "Follow Gumtree" and "Follow Gumtree Partners" sections */
+.follow,
+.follow1 {
+  color: #fff;
+}
+
+/* Homefooter.css */
+
+/* Add margin to decrease space between sections */
+.follow1 {
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+/* Additional styles for social media icons */
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px; /* Adjust the icon size as needed */
+  margin-right: 5px;
+}
+
+.footer-column1{
+  
+  
+  
+  
+}
+.Bquest{
+  color: #fff;
+  
+
+}
+
+.main12{
+  display: flex;
+  justify-content: space-around;
+  
+}

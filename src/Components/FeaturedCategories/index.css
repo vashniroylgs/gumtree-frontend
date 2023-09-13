@@ -1,0 +1,31 @@
+.home-body-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.homebody-card-container {
+  
+}
+
+.featured-categories-main-container {
+}
+
+.featured-card {
+    box-shadow: 0 0 3px #b7b4b7;
+    border-radius: 8px;
+}
+
+
+.featured-categories-heading {
+  font-weight: 400;
+}
+
+.featured-categories-card-title {
+  margin: 0;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}

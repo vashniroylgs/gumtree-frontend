@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+    font-family:"Roboto";
+}
+
+.job-section-main-container{
+    padding:4%;
+}
+.job-section-navigation{
+    font-size:24px;
+    color:grey;
+}
+.job-section-navigation-sub-part{
+    color:#222;
+}
+.job-section-ads-heading{
+    font-size:24px;
+    color:#222;
+    font-weight: 600;
+}
+.job-section-save-search-and-filter-container{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.job-section-save-alert-container{
+    display:flex;
+    align-items: center;
+    gap:6px;
+    border:1px solid grey;
+    border-radius:4px;
+    width:max-content;
+    padding:8px 12px;
+}
+.job-section-select-filter-container{
+    border-radius:4px;
+    width:max-content;
+    padding:8px 12px;
+    font-size:16px;
+}
+
+.job-section-save-alert-icon{
+    color:grey;
+    font-size:18px;
+}
+.job-section-save-alert-name{
+    font-size:16px;
+    color:#222;
+    margin:0px;
+}
+.job-section-job-filter-and-job-list-container{
+    display:flex;
+    gap:20px;
+}

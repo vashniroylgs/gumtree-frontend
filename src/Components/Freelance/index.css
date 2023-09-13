@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+
+.LocationContainer{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  height:150px;
+  width:90%;
+}
+
+.TotalcontractLabelInputCotainer{
+  width:90%;
+}
+.horizontalLine{
+  width:90%;
+  
+}
+
+
+.contractLabelInputCotainer{
+  display:flex;
+  align-items:center;
+}
+.selected{
+  border:none;
+}
+.select{
+  border:1px solid black;
+  width:150px;
+}
+.salaryContainer{
+  width:90%;
+}
+.distanceContainer{
+  width:90%;
+  display:flex;
+  justify-content:space-between;
+
+}
+.search-input-container {
+  border:2px solid black;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+
+}
+  .search-input{
+    outline:none;
+    cursor:pointer;
+    border:none;
+  }
+  .filterationContainer{
+    display:flex;
+    height:100vh;
+    flex-direction:column;
+    align-items:flex-start;
+    width:30%;
+  }
+  hr{
+    align-self:flex-start;
+  }
+
+  .TotalFilterationContainer{
+    min-height:100vh;
+    font-family:"Roboto";
+    display:flex;
+    justify-content:space-around;
+  }
+
+  .contentContainer{
+    width:70%;
+  }
+
+
+
+  .gumtree-freelance-cards{
+    background-color: white;
+    margin: 30px;
+    width: 90%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 230px;
+    
+}
+.gumtree-freelance-top-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.gumtree-freelance-button{
+    border-radius: 50px;
+    color: #fff;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 2px 8px;
+    background: #007FB0;
+    margin-bottom: 16px;   
+    width: 100px;
+    border-width: 0px;
+    height: 40px;
+}
+.gumtree-freelance-heart-color{
+    color: red;
+    height:35px;
+    width: 80px;
+}
+.gumtree-freelance-heading{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.gumtree-freelance-paragraph{
+    color: #635b67;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+.gumtree-freelance-euros{
+    color: #52a744;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+}

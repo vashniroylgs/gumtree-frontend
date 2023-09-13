@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+    font-family:"Roboto";
+}
+.jobcard-main-list-container{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.Jobcard-main-container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:100%;
+    padding:1.5%;
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    height:max-content;
+}
+.Jobcard-top-section-container{
+    display:flex;
+    justify-content: space-between;
+}
+.Jobcard-top-section-sub-container{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+.Jobcard-featured-button{
+    border:none;
+    outline:none;
+    padding:4px 10px;
+    border-radius:10px;
+    background-color:#007FB0;
+    color:#fff;
+    width:max-content;
+}
+.Jobcard-top-section-jobname{
+    font-size:14px;
+    font-weight:600;
+}
+.Jobcard-top-section-icon{
+    font-size:24px;
+    color:#ff0000;
+}
+.Jobcard-middle-section-container{
+    display:flex;
+    justify-content: space-between;
+}
+.Jobcard-middle-section-sub-container{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+.Jobcard-middle-section-name{
+    font-size:16px;
+    margin:0px;
+}
+.Jobcard-middle-section-logo{
+    width:max-content;
+    height:50px;
+    object-fit: contain;
+}
+.Jobcard-bottom-section-container{
+    display:flex;
+    justify-content: space-between;
+}
+.Jobcard-bottom-section-salary{
+    font-size:18px;
+    font-weight: 600;
+    color:#52A744;
+    margin:0px;
+}
+.Jobcard-bottom-section-time{
+    font-size: 16px;
+    margin:0px;
+}
