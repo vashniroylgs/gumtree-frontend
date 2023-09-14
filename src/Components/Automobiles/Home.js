@@ -107,7 +107,7 @@ function AutoMobiles() {
 
       <div className="sell">
         <h1 className="sell-header">
-          Have a car to sell, why not sell it with Gumtree?
+          Have a car to sell, why not sell it with BQuest?
         </h1>
         <p className="sell-paragraph">
           {" "}
