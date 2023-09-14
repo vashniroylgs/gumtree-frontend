@@ -7,22 +7,33 @@
   display: block;
   height: 50vh;
 }
+.Header{
+   color:#ffffff;
+   text-align: center;
+}
+.am,p{
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+.sell{
+    padding-top: 30px;
+   padding-bottom: 30px;
+   background-size: cover;
+   box-sizing: border-box;
+   display:block;
+   height:25vh;
+   background-color: white;
+   text-align: center;
+    
+}
+.sell h1{
+    color: #000;
+}
+.sell p{
+    color: #000;
+    font-size: medium;
 
-.sell {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-size: cover;
-  box-sizing: border-box;
-  display: block;
-  height: 25vh;
-  background-color: white;
-}
-.sell h1 {
-  color: #000;
-}
-.sell p {
-  color: #000;
-  font-size: medium;
 }
 .am1 {
   width: 100%;
@@ -32,12 +43,14 @@
   padding: 0 10px;
   box-sizing: border-box;
 }
-.am1,
-form {
-  width: 83%;
-  margin-left: 8.3%;
-  display: flex;
-  gap: 120px;
+.am1,form{
+    width: 83%;
+    margin-left: 8.3%;
+    display:flex;
+    gap: 120px;
+  
+  
+
 }
 .form1 {
   display: flex;
