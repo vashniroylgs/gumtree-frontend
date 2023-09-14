@@ -4,12 +4,6 @@ import "./home.css";
 
 const carDetails = [
   {
-    name: "Vauxhall Corsa",
-    imageUrl:
-      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694511627/ee0l9nilic62mfgamny3.jpg",
-    id: "vauxhall",
-  },
-  {
     name: "Volkswagen Polo",
     imageUrl:
       "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg",
@@ -58,7 +52,7 @@ function AutoMobiles() {
     <div>
       <div className="automobile">
         <h1 className="Header">Find Cars for Sale</h1>
-        <p className="p" style={{ color: "#fff" }}>
+        <p className="p" style={{ color: "#fff", textAlign: "center" }}>
           Search thousands of ads on the UK’s local motors marketplace *
         </p>
       </div>
