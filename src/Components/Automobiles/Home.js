@@ -24,19 +24,19 @@ const carDetails = [
 function AutoMobiles() {
   return (
     <div>
-      <div className="am">
+      <div className="automobile">
         <h1 className="Header">Find Cars for Sale</h1>
         <p className="p">
           {" "}
           Search thousands of ads on the UK’s local motors marketplace *
         </p>
       </div>
-      <div className="am1">
-        <div className="form">
-          <div className="form1">
-            <div className="f1">
+      <div className="automobile1">
+        <div className="automobile-form">
+          <div className="automobile-form1">
+            <div className="automobile-label">
               <label> Make </label>
-              <select class="fg1">
+              <select >
                 <option> Any</option>
                 <option>Abarth </option>
                 <option>Ac</option>
@@ -64,15 +64,15 @@ function AutoMobiles() {
                 <option> Infiniti</option>
               </select>
             </div>
-            <div class="f2">
+            <div class="automobile-label1">
               <label>Model </label>
-              <select class="fg1">
+              <select>
                 <option> select Model </option>
               </select>
             </div>
-            <div class="f3">
+            <div class="automobile-label2">
               <label>Price range </label>
-              <select class="fg3">
+              <select>
                 <option>min</option>
                 <option> $ 0</option>
                 <option> $ 500</option>
@@ -83,9 +83,9 @@ function AutoMobiles() {
                 <option> $ 30000</option>
               </select>
             </div>
-            <div class="f3">
+            <div class="automobile-label3">
               <label>Price range </label>
-              <select class="fg3">
+              <select >
                 <option>max</option>
                 <option> $ 50000</option>
                 <option> $ 40000</option>
@@ -98,12 +98,12 @@ function AutoMobiles() {
               </select>
             </div>
           </div>
-          <div className="location">
-            <label> Location</label>
-            <input type="text" placeholder="Enter Location" />
-          </div>
-        </div>
+     
+         </div>
+  
+      
       </div>
+      
 
       <div className="sell">
         <h1 className="sell-header">
