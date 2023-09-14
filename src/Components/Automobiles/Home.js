@@ -1,89 +1,147 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
+
+const carDetails = [
+  {
+    name: "Vauxhall Corsa",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694511627/ee0l9nilic62mfgamny3.jpg",
+    id: "vauxhall",
+  },
+  {
+    name: "Volkswagen Polo",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg",
+    carDetail: "volkswagen",
+  },
+  {
+    name: "Ford Fiesta",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694513185/z9mjcmy2wcvxaip1l0oz.jpg",
+    carDetail: "ford",
+  },
+  {
+    name: "Honda Civic",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694513330/bmle1f0vd8dpfnn96kbx.jpg",
+    carDetail: "honda",
+  },
+  {
+    name: "Toyota Supra",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694514762/t84tanyvh9re1bxujc4f.jpg",
+    carDetail: "toyota",
+  },
+  {
+    name: "Land Rover Defender",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694514972/a30rlsw3q9c6p6gcjveq.jpg",
+    carDetail: "landrover",
+  },
+  {
+    name: "Toyota Hilux",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694515368/fapsm4ewhwebwfq82av2.jpg",
+    carDetail: "toyota",
+  },
+  {
+    name: "Audi A3",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694515497/y5uwcljmgrahivmanhmn.jpg",
+    carDetail: "audi",
+  },
+];
 
 function AutoMobiles() {
   return (
     <div>
       <div className="am">
         <h1 className="Header">Find Cars for Sale</h1>
-        <p className="p"> Search thousands of ads on the UK’s local motors marketplace *</p>
+        <p className="p">
+          {" "}
+          Search thousands of ads on the UK’s local motors marketplace *
+        </p>
       </div>
-      <div className="am1">
-        <div className="form">
-          <div className="form1">
-            <div className="f1">
-              <label> Make </label>
-              <select class="fg1">
-                <option> Any</option>
-                <option>Abarth </option>
-                <option>Ac</option>
-                <option>Aixam</option>
-                <option> Alfa Romeo</option>
-                <option> Aston Martin</option>
-                <option> Audi</option>
-                <option> Bentley</option>
-                <option> BMW</option>
-                <option> Bugatti</option>
-                <option> Buick</option>
-                <option> Cadillac</option>
-                <option> Chevrolet</option>
-                <option> Chrysler</option>
-                <option> Citroen</option>
-                <option> Dacia</option>
+      <div className="container">
+        <div className="am1">
+          <div className="form">
+            <div className="form1">
+              <div className="f1">
+                <label> Make </label>
+                <select class="fg1">
+                  <option> Any</option>
+                  <option>Abarth </option>
+                  <option>Ac</option>
+                  <option>Aixam</option>
+                  <option> Alfa Romeo</option>
+                  <option> Aston Martin</option>
+                  <option> Audi</option>
+                  <option> Bentley</option>
+                  <option> BMW</option>
+                  <option> Bugatti</option>
+                  <option> Buick</option>
+                  <option> Cadillac</option>
+                  <option> Chevrolet</option>
+                  <option> Chrysler</option>
+                  <option> Citroen</option>
+                  <option> Dacia</option>
 
-                <option> Dodge</option>
-                <option> DS</option>
-                <option> Ferrari</option>
-                <option> Fiat</option>
-                <option> Ford</option>
-                <option> Honda</option>
-                <option> Hyundai</option>
-                <option> Infiniti</option>
-              </select>
+                  <option> Dodge</option>
+                  <option> DS</option>
+                  <option> Ferrari</option>
+                  <option> Fiat</option>
+                  <option> Ford</option>
+                  <option> Honda</option>
+                  <option> Hyundai</option>
+                  <option> Infiniti</option>
+                </select>
+              </div>
+              <div class="f2">
+                <label>Model </label>
+                <select class="fg1">
+                  <option> select Model </option>
+                </select>
+              </div>
+              <div class="f3">
+                <label>Price range </label>
+                <select class="fg3">
+                  <option>min</option>
+                  <option> $ 0</option>
+                  <option> $ 500</option>
+                  <option> $ 1000</option>
+                  <option> $ 5000</option>
+                  <option> $ 10000</option>
+                  <option> $ 20000</option>
+                  <option> $ 30000</option>
+                </select>
+              </div>
+              <div class="f3">
+                <label>Price range </label>
+                <select class="fg3">
+                  <option>max</option>
+                  <option> $ 50000</option>
+                  <option> $ 40000</option>
+                  <option> $ 30000</option>
+                  <option> $ 20000</option>
+                  <option> $ 10000</option>
+                  <option> $ 5000</option>
+                  <option> $ 1000</option>
+                  <option> $ 500</option>
+                </select>
+              </div>
             </div>
-            <div class="f2">
-              <label>Model </label>
-              <select class="fg1">
-                <option> select Model </option>
-              </select>
+            <div className="location">
+              <label> Location</label>
+              <input type="text" placeholder="Enter Location" />
             </div>
-            <div class="f3">
-              <label>Price range </label>
-              <select class="fg3">
-                <option>min</option>
-                <option> $ 0</option>
-                <option> $ 500</option>
-                <option> $ 1000</option>
-                <option> $ 5000</option>
-                <option> $ 10000</option>
-                <option> $ 20000</option>
-                <option> $ 30000</option>
-              </select>
-            </div>
-            <div class="f3">
-              <label>Price range </label>
-              <select class="fg3">
-                <option>max</option>
-                <option> $ 50000</option>
-                <option> $ 40000</option>
-                <option> $ 30000</option>
-                <option> $ 20000</option>
-                <option> $ 10000</option>
-                <option> $ 5000</option>
-                <option> $ 1000</option>
-                <option> $ 500</option>
-              </select>
-            </div>
-          </div>
-          <div className="location">
-            <label> Location</label>
-            <input type="text" placeholder="Enter Location" />
           </div>
         </div>
       </div>
-
       <div className="sell">
-        <h1 className="sell-header">Have a car to sell, why not sell it with Gumtree?</h1>
+        <h1 className="sell-header">
+          Have a car to sell, why not sell it with Gumtree?
+        </h1>
         <p className="sell-paragraph">
           {" "}
           Sell your car for FREE
@@ -98,80 +156,21 @@ function AutoMobiles() {
         </center>
         -
         <div className="images">
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694511627/ee0l9nilic62mfgamny3.jpg"
-              alt=""
-            ></img>
-
-            <h2> Vauxhall Corsa</h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg"
-              alt=""
-            ></img>
-
-            <h2> Volkswagen Polo </h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694513185/z9mjcmy2wcvxaip1l0oz.jpg"
-              alt=""
-            ></img>
-
-            <h2>Ford Fiesta</h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694513330/bmle1f0vd8dpfnn96kbx.jpg"
-              alt=""
-            ></img>
-
-            <h2> Honda Civic </h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694514762/t84tanyvh9re1bxujc4f.jpg"
-              alt=""
-            ></img>
-
-            <h2> Toyota Supra </h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694514972/a30rlsw3q9c6p6gcjveq.jpg"
-              alt=""
-            ></img>
-
-            <h2> Land Rover Defender </h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694515368/fapsm4ewhwebwfq82av2.jpg"
-              alt=""
-            ></img>
-
-            <h2> Toyota Hilux </h2>
-          </div>
-
-          <div className="car-images">
-            <img
-              src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694515497/y5uwcljmgrahivmanhmn.jpg"
-              alt=""
-            ></img>
-
-            <h2> Audi A3 </h2>
-          </div>
+          {carDetails.map((car, index) => (
+            <Link
+              to={`/automobiles/${car.carDetail}`}
+              key={index}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="car-images">
+                <img src={car.imageUrl} alt="" />
+                <h2>{car.name}</h2>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
-      
+
       <div className="card-container">
         <center>
           <h1 className="Read">
@@ -237,11 +236,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-    
-      
- 
-</div>
-    
+    </div>
   );
 }
 

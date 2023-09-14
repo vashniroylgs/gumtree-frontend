@@ -9,6 +9,8 @@ import Categories from "./Components/Categories";
 import AutoMobiles from "./Components/Automobiles/Home";
 import Freelancing from "./Components/Freelance";
 import JobSectionMain from "./Components/JobSectionMain";
+import CarPage from "./Components/CarPage";
+import CarDetailedView from "./Components/CarDetailView";
 
 function App() {
   return (
@@ -19,9 +21,15 @@ function App() {
         <Route exact path="/" Component={HomePage} />
         <Route exact path="/properties" Component={Property} />
         <Route exact path="/electronics" Component={Electronics} />
-        <Route exact path="/automobiles"  Component={AutoMobiles} />
+        <Route exact path="/automobiles" Component={AutoMobiles} />
         <Route exact path="/freelancing" Component={Freelancing} />
-        <Route exact path="/jobs" Component={JobSectionMain}/>
+        <Route exact path="/jobs" Component={JobSectionMain} />
+        <Route exact path="/automobiles/:carDetail" Component={CarPage} />
+        <Route
+          exact
+          path="/automobiles/carDetails/:id"
+          Component={CarDetailedView}
+        />
       </Routes>
       <Homefooter />
     </>
