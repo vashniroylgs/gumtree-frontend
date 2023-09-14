@@ -1,15 +1,18 @@
-.am {
-  background-image: url(https://www.gumtree.com/static/1/resources/assets/rwd/images/orphans/motors/430c7572aa4e0c6785251bee.lp-takeover.jpg);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-size: cover;
-  box-sizing: border-box;
-  display: block;
-  height: 50vh;
+.automobile{
+   background-image: url(https://www.gumtree.com/static/1/resources/assets/rwd/images/orphans/motors/430c7572aa4e0c6785251bee.lp-takeover.jpg);
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background-size: cover;
+   box-sizing: border-box;
+   display:block;
+   height: 50vh;
+ 
 }
 .Header{
    color:#ffffff;
    text-align: center;
+   margin-top:45px;
+    font-weight: 600;
 }
 /* Apply these styles to create the overlay container */
 .container {
@@ -26,8 +29,9 @@
 
 .am,p{
     color: white;
-    font-size: medium;
+font-size: x-large;
     text-align: center;
+    margin-bottom: 10px;
 }
 .sell{
     padding-top: 30px;
@@ -47,7 +51,7 @@
   font-family: sans-serif;
   font-weight: bold;
 }
-.sell p{
+.sell-paragraph{
     color: #000;
     font-size: medium;
     margin-left: -373px;
@@ -60,23 +64,23 @@
   padding: 0 10px;
   box-sizing: border-box;
 }
-.am1,form{
+.automobile-form{
     width: 83%;
     margin-left: 8.3%;
     display:flex;
     gap: 120px;
-  
-  
-
 }
-.form1 {
-  display: flex;
-  flex-direction: row;
-  gap: 250px;
+.automobile-form1{
+display: flex;
+flex-direction: row;
+gap: 250px;
 
-  font-size: 15px;
-  color: #000;
-  font-weight: 600;
+
+font-size: 15px;
+color: #000;
+font-weight: 600;
+
+
 }
 .f1 {
   display: flex;
@@ -157,31 +161,37 @@ label {
 
   background-color: rgb(255, 255, 255);
 
-  box-shadow: 50px;
+    box-shadow: 50px;
 
-  margin: 10px;
+    margin: 10px;
 
-  margin-top: 15px;
+    margin-top: 15px;
+
 }
 
-.popular {
-  color: black;
+ 
 
-  font-style: normal;
+.popular{
 
-  font-family: inherit;
+color: black;
 
-  align-items: center;
+font-style: normal;
 
-  justify-content: center;
+font-family: inherit;
 
-  margin-top: 5px;
+align-items: center;
+
+justify-content: center;
+
+margin-top: 5px;
+
 }
 
-.images {
-  flex-wrap: wrap;
+.images{
 
-  display: flex;
+    flex-wrap: wrap;
+
+    display: flex;
 
   margin-left: 40px;
 }
@@ -198,10 +208,13 @@ label {
 /* .car-images {
   margin: 30px;
 
-  line-height: 1px;
+    line-height: 1px;
 
-  text-align: center;
-  cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+
+   
+
 }
 .car-images img{
   width: auto;

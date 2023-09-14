@@ -1,12 +1,35 @@
 import React from "react";
 import "./home.css";
 
+const carDetails = [
+  {
+    name: "Vauxhall Corsa",
+
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694511627/ee0l9nilic62mfgamny3.jpg",
+
+    id: "vauxhall",
+  },
+
+  {
+    name: "Volkswagen Polo",
+
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg",
+
+    id: "volkswagen",
+  },
+];
+
 function AutoMobiles() {
   return (
     <div>
-      <div className="am">
+      <div className="automobile">
         <h1 className="Header">Find Cars for Sale</h1>
-        <p className="p"> Search thousands of ads on the UK’s local motors marketplace *</p>
+        <p className="p">
+          {" "}
+          Search thousands of ads on the UK’s local motors marketplace *
+        </p>
       </div>
       <div className="container">
       <div className="am1">
@@ -14,7 +37,7 @@ function AutoMobiles() {
           <div className="form1">
             <div className="f1">
               <label> Make </label>
-              <select class="fg1">
+              <select >
                 <option> Any</option>
                 <option>Abarth </option>
                 <option>Ac</option>
@@ -42,15 +65,15 @@ function AutoMobiles() {
                 <option> Infiniti</option>
               </select>
             </div>
-            <div class="f2">
+            <div class="automobile-label1">
               <label>Model </label>
-              <select class="fg1">
+              <select>
                 <option> select Model </option>
               </select>
             </div>
-            <div class="f3">
+            <div class="automobile-label2">
               <label>Price range </label>
-              <select class="fg3">
+              <select>
                 <option>min</option>
                 <option> $ 0</option>
                 <option> $ 500</option>
@@ -61,9 +84,9 @@ function AutoMobiles() {
                 <option> $ 30000</option>
               </select>
             </div>
-            <div class="f3">
+            <div class="automobile-label3">
               <label>Price range </label>
-              <select class="fg3">
+              <select >
                 <option>max</option>
                 <option> $ 50000</option>
                 <option> $ 40000</option>
@@ -76,15 +99,16 @@ function AutoMobiles() {
               </select>
             </div>
           </div>
-          <div className="location">
-            <label> Location</label>
-            <input type="text" placeholder="Enter Location" />
-          </div>
-        </div>
+     
+         </div>
+  
+      
       </div>
       </div>
       <div className="sell">
-        <h1 className="sell-header">Have a car to sell, why not sell it with Gumtree?</h1>
+        <h1 className="sell-header">
+          Have a car to sell, why not sell it with BQuest?
+        </h1>
         <p className="sell-paragraph">
           {" "}
           Sell your car for FREE
@@ -172,7 +196,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-      
+
       <div className="card-container">
         <center>
           <h1 className="Read">
@@ -238,11 +262,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-    
-      
- 
-</div>
-    
+    </div>
   );
 }
 
