@@ -5,7 +5,7 @@ function AutoMobiles() {
   return (
     <div>
       <div className="am">
-        <h1>Find Cars for Sale</h1>
+        <h1 className="Header">Find Cars for Sale</h1>
         <p> Search thousands of ads on the UK’s local motors marketplace *</p>
       </div>
       <div className="am1">
@@ -171,9 +171,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-      <div className="browse">
-        <h1>Browse by body type</h1>
-      </div>
+      
       <div className="card-container">
         <center>
           <h1 className="Read">
@@ -239,7 +237,10 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-    </div>
+      
+ 
+</div>
+    
   );
 }
 
