@@ -265,7 +265,7 @@ const DiscoveredFinds = () => {
       {homeMoreCards.map((image) => (
         <div key={image.id} style={{ margin: "5px" }}>
           <div style={{ margin: "0" }}>
-            <img src={image.image} height="280" width="300" alt={image.name} />
+            <img src={image.image} height="200" width="220" alt={image.name} />
             <div
               className="discover-home-card-details-section"
             >
