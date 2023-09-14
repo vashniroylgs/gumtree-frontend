@@ -1,12 +1,35 @@
 import React from "react";
 import "./home.css";
 
+const carDetails = [
+  {
+    name: "Vauxhall Corsa",
+
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694511627/ee0l9nilic62mfgamny3.jpg",
+
+    id: "vauxhall",
+  },
+
+  {
+    name: "Volkswagen Polo",
+
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg",
+
+    id: "volkswagen",
+  },
+];
+
 function AutoMobiles() {
   return (
     <div>
       <div className="am">
         <h1 className="Header">Find Cars for Sale</h1>
-        <p className="p"> Search thousands of ads on the UK’s local motors marketplace *</p>
+        <p className="p">
+          {" "}
+          Search thousands of ads on the UK’s local motors marketplace *
+        </p>
       </div>
       <div className="am1">
         <div className="form">
@@ -83,7 +106,9 @@ function AutoMobiles() {
       </div>
 
       <div className="sell">
-        <h1 className="sell-header">Have a car to sell, why not sell it with Gumtree?</h1>
+        <h1 className="sell-header">
+          Have a car to sell, why not sell it with Gumtree?
+        </h1>
         <p className="sell-paragraph">
           {" "}
           Sell your car for FREE
@@ -171,7 +196,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-      
+
       <div className="card-container">
         <center>
           <h1 className="Read">
@@ -237,11 +262,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-    
-      
- 
-</div>
-    
+    </div>
   );
 }
 

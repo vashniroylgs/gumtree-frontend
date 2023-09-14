@@ -7,24 +7,71 @@
   color: red;
   height: 35px;
   width: 80px;
+  z-index: 999;
+  position: relative;
+  
 }
 
 .discover-home-card-details-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: white;
+  margin-left: 5%;
+  padding: 5%;
 }
+
+.discover-card-container {
+  box-shadow: 0 0 3px #b7b4b7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 24%;
+}
+
+.discover-card-image {
+  height: 200px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.discover-card-heading {
+  font-size: 20px;
+}
+
 .discover-home-location-card {
   display: flex;
   flex-direction: column;
   color: black !important;
   justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 10px;
+  align-self: flex-start;
+}
+
+.discover-card-location-contianer {
+  display: flex;
+  width: max-content;
+  height: max-content;
+  color: black;
+}
+
+.discover-card-location-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.discover-card-location {
+  font-size: 13px;
+  display: flex;
+  color: black;
+  margin: 0;
+  align-self: flex-start;
 }
 
 .discover-gumtree-freelance-euros {
   color: #52a744;
   font-family: "Roboto";
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }

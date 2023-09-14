@@ -263,34 +263,41 @@ const DiscoveredFinds = () => {
   return (
     <div className="discover-home-body-container d-flex flex-wrap">
       {homeMoreCards.map((image) => (
-        <div key={image.id} style={{ margin: "5px" }}>
-          <div style={{ margin: "0" }}>
-            <img src={image.image} height="200" width="220" alt={image.name} />
-            <div
-              className="discover-home-card-details-section"
-            >
-              <div className="discover-home-location-card">
-                <h3 style={{ color: "black" }}>{image.name}</h3>
-                <p style={{ color: "black" }}>
-                  <span>
-                    <CiLocationOn />
-                  </span>
-                  {image.location}
-                </p>
-                <p style={{ color: "black" }}>
-                  <span>
-                    <BiTimeFive />
-                  </span>
-                  {image.uploadduration}
-                </p>
+        <div
+          key={image.id}
+          style={{ margin: "5px" }}
+          className="discover-card-container"
+        >
+          <img
+            src={image.image}
+            className="discover-card-image"
+            alt={image.name}
+          />
+          <div className="discover-home-card-details-section">
+            <div className="discover-home-location-card">
+              <h4
+                style={{ color: "black", margin: "0" }}
+                className="discover-card-heading"
+              >
+                {image.name}
+              </h4>
+              <h3 className="discover-gumtree-freelance-euros">
+                {image.price}
+              </h3>
+              <div className="discover-card-location-contianer">
+                <span>
+                  <CiLocationOn className="discover-card-location-icon" />
+                </span>
+                <p className="discover-card-location">{image.location}</p>
               </div>
-              <div className="discover-home-location-card">
-                <BiHeart className="discover-gumtree-freelance-heart-color" />
-                <h3 className="discover-gumtree-freelance-euros">
-                  {image.price}
-                </h3>
+              <div className="discover-card-location-contianer">
+                <span>
+                  <BiTimeFive className="discover-card-location-icon" />
+                </span>
+                <p  className="discover-card-location">{image.uploadduration}</p>
               </div>
             </div>
+            <BiHeart className="discover-gumtree-freelance-heart-color" />
           </div>
         </div>
       ))}
