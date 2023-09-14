@@ -5,7 +5,7 @@ import "./index.css";
 const HomePage = () => {
   return (
     <>
-      <div className="home-main-contianer" style={{backgroundColor: '#ffde22'}}>
+      <div className="home-main-contianer">
         <div className="home-mini-all-categories-contianer">
           <FeaturedCategories />
           <DiscoveredFinds />
