@@ -58,86 +58,75 @@ function AutoMobiles() {
     <div>
       <div className="automobile">
         <h1 className="Header">Find Cars for Sale</h1>
-        <p className="p">
-          {" "}
-          Search thousands of ads on the UK’s local motors marketplace *
-        </p>
-        <p className="p">
-          {" "}
+        <p className="p" style={{ color: "#fff" }}>
           Search thousands of ads on the UK’s local motors marketplace *
         </p>
       </div>
-      <div className="container">
-        <div className="am1">
-          <div className="form">
-            <div className="form1">
-              <div className="f1">
-                <label> Make </label>
-                <select class="fg1">
-                  <option> Any</option>
-                  <option>Abarth </option>
-                  <option>Ac</option>
-                  <option>Aixam</option>
-                  <option> Alfa Romeo</option>
-                  <option> Aston Martin</option>
-                  <option> Audi</option>
-                  <option> Bentley</option>
-                  <option> BMW</option>
-                  <option> Bugatti</option>
-                  <option> Buick</option>
-                  <option> Cadillac</option>
-                  <option> Chevrolet</option>
-                  <option> Chrysler</option>
-                  <option> Citroen</option>
-                  <option> Dacia</option>
+      <div className="automobile1">
+        <div className="automobile-form">
+          <div className="automobile-form1">
+            <div className="automobile-label">
+              <label> Make </label>
+              <select>
+                <option> Any</option>
+                <option>Abarth </option>
+                <option>Ac</option>
+                <option>Aixam</option>
+                <option> Alfa Romeo</option>
+                <option> Aston Martin</option>
+                <option> Audi</option>
+                <option> Bentley</option>
+                <option> BMW</option>
+                <option> Bugatti</option>
+                <option> Buick</option>
+                <option> Cadillac</option>
+                <option> Chevrolet</option>
+                <option> Chrysler</option>
+                <option> Citroen</option>
+                <option> Dacia</option>
 
-                  <option> Dodge</option>
-                  <option> DS</option>
-                  <option> Ferrari</option>
-                  <option> Fiat</option>
-                  <option> Ford</option>
-                  <option> Honda</option>
-                  <option> Hyundai</option>
-                  <option> Infiniti</option>
-                </select>
-              </div>
-              <div class="f2">
-                <label>Model </label>
-                <select class="fg1">
-                  <option> select Model </option>
-                </select>
-              </div>
-              <div class="f3">
-                <label>Price range </label>
-                <select class="fg3">
-                  <option>min</option>
-                  <option> $ 0</option>
-                  <option> $ 500</option>
-                  <option> $ 1000</option>
-                  <option> $ 5000</option>
-                  <option> $ 10000</option>
-                  <option> $ 20000</option>
-                  <option> $ 30000</option>
-                </select>
-              </div>
-              <div class="f3">
-                <label>Price range </label>
-                <select class="fg3">
-                  <option>max</option>
-                  <option> $ 50000</option>
-                  <option> $ 40000</option>
-                  <option> $ 30000</option>
-                  <option> $ 20000</option>
-                  <option> $ 10000</option>
-                  <option> $ 5000</option>
-                  <option> $ 1000</option>
-                  <option> $ 500</option>
-                </select>
-              </div>
+                <option> Dodge</option>
+                <option> DS</option>
+                <option> Ferrari</option>
+                <option> Fiat</option>
+                <option> Ford</option>
+                <option> Honda</option>
+                <option> Hyundai</option>
+                <option> Infiniti</option>
+              </select>
             </div>
-            <div className="location">
-              <label> Location</label>
-              <input type="text" placeholder="Enter Location" />
+            <div class="automobile-label1">
+              <label>Model </label>
+              <select>
+                <option> select Model </option>
+              </select>
+            </div>
+            <div class="automobile-label2">
+              <label>Price range </label>
+              <select>
+                <option>min</option>
+                <option> $ 0</option>
+                <option> $ 500</option>
+                <option> $ 1000</option>
+                <option> $ 5000</option>
+                <option> $ 10000</option>
+                <option> $ 20000</option>
+                <option> $ 30000</option>
+              </select>
+            </div>
+            <div class="automobile-label3">
+              <label>Price range </label>
+              <select>
+                <option>max</option>
+                <option> $ 50000</option>
+                <option> $ 40000</option>
+                <option> $ 30000</option>
+                <option> $ 20000</option>
+                <option> $ 10000</option>
+                <option> $ 5000</option>
+                <option> $ 1000</option>
+                <option> $ 500</option>
+              </select>
             </div>
           </div>
         </div>
@@ -147,7 +136,6 @@ function AutoMobiles() {
           Have a car to sell, why not sell it with Gumtree?
         </h1>
         <p className="sell-paragraph">
-          {" "}
           Sell your car for FREE
           <br />
           Selling a car is free for private sellers
@@ -175,7 +163,6 @@ function AutoMobiles() {
         </div>
       </div>
 
-
       <div className="card-container">
         <center>
           <h1 className="Read">
@@ -189,16 +176,12 @@ function AutoMobiles() {
               src="https://res.cloudinary.com/dcczhcvjg/image/upload/v1694519463/zwwujvck4eggg1zg7dip.jpg"
               alt=""
             ></img>
-
             <h3>Car reviews</h3>
-
             <h2> Browse car reviews</h2>
-
             <h5>
               With our expert team’s ratings and commentary, you’ll think you’ve
               just been on a test drive.
             </h5>
-
             <button>Read full review</button>
           </div>
 
@@ -241,7 +224,6 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
