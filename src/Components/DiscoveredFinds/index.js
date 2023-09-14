@@ -1,9 +1,8 @@
 import "./index.css";
-import {v4} from 'uuid'
-import { BiHeart} from 'react-icons/bi';
-import {CiLocationOn} from 'react-icons/ci';
-import {BiTimeFive} from 'react-icons/bi';
-
+import { v4 } from "uuid";
+import { BiHeart } from "react-icons/bi";
+import { CiLocationOn } from "react-icons/ci";
+import { BiTimeFive } from "react-icons/bi";
 
 const homeMoreCards = [
   {
@@ -262,30 +261,34 @@ const homeMoreCards = [
 
 const DiscoveredFinds = () => {
   return (
-    <div className="home-body-container">
+    <div className="discover-home-body-container d-flex flex-wrap">
       {homeMoreCards.map((image) => (
-        <div key={image.id}>
-          <div className="col-md-4 homebody-card-container">
-            <img src={image.image} height="300" width="350" alt={image.name} />
-            <div className="home-card-details-section">
-              <div className="home-location-card">
-                <h3>{image.name}</h3>
-                <p>
+        <div key={image.id} style={{ margin: "5px" }}>
+          <div style={{ margin: "0" }}>
+            <img src={image.image} height="280" width="300" alt={image.name} />
+            <div
+              className="discover-home-card-details-section"
+            >
+              <div className="discover-home-location-card">
+                <h3 style={{ color: "black" }}>{image.name}</h3>
+                <p style={{ color: "black" }}>
                   <span>
                     <CiLocationOn />
                   </span>
                   {image.location}
                 </p>
-                <p>
+                <p style={{ color: "black" }}>
                   <span>
                     <BiTimeFive />
                   </span>
                   {image.uploadduration}
                 </p>
               </div>
-              <div className="home-location-card">
-                <BiHeart className="gumtree-freelance-heart-color" />
-                <h3 className="gumtree-freelance-euros">{image.price}</h3>
+              <div className="discover-home-location-card">
+                <BiHeart className="discover-gumtree-freelance-heart-color" />
+                <h3 className="discover-gumtree-freelance-euros">
+                  {image.price}
+                </h3>
               </div>
             </div>
           </div>

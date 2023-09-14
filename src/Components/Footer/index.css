@@ -2,7 +2,6 @@
 
 /* Set the background color for the entire page */
 
-
 /* Styles for the main footer section */
 .footer {
   background-color: #333;
@@ -96,20 +95,13 @@
   margin-right: 5px;
 }
 
-.footer-column1{
-  
-  
-  
-  
+.footer-column1 {
 }
-.Bquest{
+.Bquest {
   color: #fff;
-  
-
 }
 
-.main12{
+.main12 {
   display: flex;
   justify-content: space-around;
-  
 }

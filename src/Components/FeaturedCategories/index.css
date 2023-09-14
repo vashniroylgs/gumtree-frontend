@@ -1,8 +1,9 @@
-.home-body-container {
+.featured-home-body-container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
+  
 }
 
 .homebody-card-container {
@@ -15,6 +16,7 @@
 .featured-card {
     box-shadow: 0 0 3px #b7b4b7;
     border-radius: 8px;
+    background-color: white;
 }
 
 
@@ -28,4 +30,5 @@
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 10px;
+  color: black;
 }
