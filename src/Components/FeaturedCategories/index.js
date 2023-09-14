@@ -264,9 +264,9 @@ const FeaturedCategories = () => {
   return (
     <div className="featured-categories-main-container">
       <h2 className="featured-categories-heading">Featured Categories</h2>
-      <div className="home-body-container">
+      <div className="featured-home-body-container">
         {topData.map((image) => (
-          <div className="featured-card" key={image.id}>
+          <div className="featured-card" key={image.id} >
             <div className="col-md-4 homebody-card-container">
               <img
                 src={image.image}

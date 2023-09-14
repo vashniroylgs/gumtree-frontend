@@ -44,8 +44,8 @@ const Homefooter = () => {
           </div>
         </div>
       </footer>
-      <hr className="footer-separator" /> {/* Horizontal Line */}
-      <div className='main12'>
+      {/* <hr className="footer-separator" /> Horizontal Line */}
+      {/* <div className='main12'>
       <div className="second">
         <div className="footer-column1">
           <h3 className='follow'>Follow Bquest</h3>
@@ -68,7 +68,7 @@ const Homefooter = () => {
         
         <h3 className='Bquest'>Bquest Partners</h3>
         
-        </div>
+        </div> */}
         
        
        
