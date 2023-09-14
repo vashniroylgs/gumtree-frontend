@@ -8,6 +8,7 @@ function AutoMobiles() {
         <h1 className="Header">Find Cars for Sale</h1>
         <p className="p"> Search thousands of ads on the UK’s local motors marketplace *</p>
       </div>
+      <div className="container">
       <div className="am1">
         <div className="form">
           <div className="form1">
@@ -81,7 +82,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
-
+      </div>
       <div className="sell">
         <h1 className="sell-header">Have a car to sell, why not sell it with Gumtree?</h1>
         <p className="sell-paragraph">
