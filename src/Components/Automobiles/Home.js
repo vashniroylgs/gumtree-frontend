@@ -56,8 +56,12 @@ const carDetails = [
 function AutoMobiles() {
   return (
     <div>
-      <div className="am">
+      <div className="automobile">
         <h1 className="Header">Find Cars for Sale</h1>
+        <p className="p">
+          {" "}
+          Search thousands of ads on the UK’s local motors marketplace *
+        </p>
         <p className="p">
           {" "}
           Search thousands of ads on the UK’s local motors marketplace *
@@ -171,6 +175,7 @@ function AutoMobiles() {
         </div>
       </div>
 
+
       <div className="card-container">
         <center>
           <h1 className="Read">
@@ -236,6 +241,7 @@ function AutoMobiles() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
