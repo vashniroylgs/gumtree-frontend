@@ -11,7 +11,7 @@
    color:#ffffff;
    text-align: center;
 }
-.am,p{
+.p{
     color: white;
     font-size: medium;
     text-align: center;
@@ -27,10 +27,10 @@
    text-align: center;
     
 }
-.sell h1{
+.sell-header{
     color: #000;
 }
-.sell p{
+.sell-paragraph{
     color: #000;
     font-size: medium;
 
@@ -45,7 +45,7 @@
    
 
 }
-.am1,form{
+.form{
     width: 83%;
     margin-left: 8.3%;
     display:flex;
