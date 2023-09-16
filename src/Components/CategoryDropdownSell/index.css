@@ -1,0 +1,47 @@
+.select-category-homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.select-category-mini-container {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: max-content;
+  width: 50%;
+}
+
+
+.select-category-homepage-para {
+  font-weight: bold;
+}
+
+.select-category-dropdown-input{
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.category-submit-btnn {
+  background-color: #498124;
+  height: 45px;
+  width: 150px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius:  8px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25%;
+}

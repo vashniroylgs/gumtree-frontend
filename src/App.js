@@ -13,6 +13,8 @@ import CarPage from "./Components/CarPage";
 import CarDetailedView from "./Components/CarDetailView";
 import JobForm from "./Components/JobForm";
 
+import PostAdCategory from "./Components/CategoryDropdownSell";
+import AutomobilesUploadForm from "./Components/AutomobilesUpload";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           path="/automobiles/carDetails/:id"
           Component={CarDetailedView}
         />
+        <Route exact path="/selectsellform" Component={PostAdCategory} />
+        <Route exact path="/automobilesuploadform" Component={AutomobilesUploadForm} />
       </Routes>
       <Homefooter />
     </>
