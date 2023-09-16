@@ -28,8 +28,7 @@ function App() {
         <Route exact path="/jobs" Component={JobSectionMain} />
         <Route exact path="/automobiles/:carDetail" Component={CarPage} />
         <Route exact path="/jobform" Component={JobForm} />
-        <Route
-          exact
+        <Route exact
           path="/automobiles/carDetails/:id"
           Component={CarDetailedView}
         />

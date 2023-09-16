@@ -33,7 +33,7 @@ class JobForm extends Component {
           };
 
           try {
-            const response = await fetch('http://localhost:3005/register', {
+            const response = await fetch('http://localhost:3009/addjob', {
               method: 'POST',
               body: JSON.stringify(body),
               headers: {
