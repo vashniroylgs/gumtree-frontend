@@ -16,7 +16,7 @@ const PostAdCategory = () => {
     if (category === "electronics") {
       navigate("/electronics");
     } else if (category === "automobiles") {
-      navigate("/automobiles");
+      navigate("/automobilesuploadform");
     } else if (category === "jobs") {
       navigate("/jobs");
     } else if (category === "freelance") {
