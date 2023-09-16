@@ -4,12 +4,6 @@ import "./home.css";
 
 const carDetails = [
   {
-    name: "Vauxhall Corsa",
-    imageUrl:
-      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694511627/ee0l9nilic62mfgamny3.jpg",
-    id: "vauxhall",
-  },
-  {
     name: "Volkswagen Polo",
     imageUrl:
       "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg",
@@ -58,7 +52,7 @@ function AutoMobiles() {
     <div>
       <div className="automobile">
         <h1 className="Header">Find Cars for Sale</h1>
-        <p className="p" style={{ color: "#fff" }}>
+        <p className="p" style={{ color: "#fff", textAlign: "center" }}>
           Search thousands of ads on the UK’s local motors marketplace *
         </p>
       </div>
@@ -140,7 +134,7 @@ function AutoMobiles() {
           <br />
           Selling a car is free for private sellers
         </p>
-        <a href=""> Learn more about sell you car </a>
+        <a href="/"> Learn more about sell you car </a>
       </div>
       <div className="automobiles">
         <center>
@@ -182,7 +176,7 @@ function AutoMobiles() {
               With our expert team’s ratings and commentary, you’ll think you’ve
               just been on a test drive.
             </h5>
-            <button>Read full review</button>
+            <button className="read-full-review-button">Read full review</button>
           </div>
 
           <div className="card-images">
@@ -201,7 +195,7 @@ function AutoMobiles() {
               of researching with our hand-picked cars..
             </h5>
 
-            <button>Read full review</button>
+            <button className="read-full-review-button">Read full review</button>
           </div>
 
           <div className="card-images">
@@ -220,7 +214,7 @@ function AutoMobiles() {
               buying on finance..
             </h5>
 
-            <button>Read full review</button>
+            <button className="read-review-btn">Read full review</button>
           </div>
         </div>
       </div>

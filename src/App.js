@@ -11,6 +11,10 @@ import Freelancing from "./Components/Freelance";
 import JobSectionMain from "./Components/JobSectionMain";
 import CarPage from "./Components/CarPage";
 import CarDetailedView from "./Components/CarDetailView";
+import JobForm from "./Components/JobForm";
+
+import PostAdCategory from "./Components/CategoryDropdownSell";
+import AutomobilesUploadForm from "./Components/AutomobilesUpload";
 
 function App() {
   return (
@@ -25,11 +29,13 @@ function App() {
         <Route exact path="/freelancing" Component={Freelancing} />
         <Route exact path="/jobs" Component={JobSectionMain} />
         <Route exact path="/automobiles/:carDetail" Component={CarPage} />
-        <Route
-          exact
+        <Route exact path="/jobform" Component={JobForm} />
+        <Route exact
           path="/automobiles/carDetails/:id"
           Component={CarDetailedView}
         />
+        <Route exact path="/selectsellform" Component={PostAdCategory} />
+        <Route exact path="/automobilesuploadform" Component={AutomobilesUploadForm} />
       </Routes>
       <Homefooter />
     </>
