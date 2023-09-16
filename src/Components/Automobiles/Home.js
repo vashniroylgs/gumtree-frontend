@@ -140,7 +140,7 @@ function AutoMobiles() {
           <br />
           Selling a car is free for private sellers
         </p>
-        <a href=""> Learn more about sell you car </a>
+        <a href="/"> Learn more about sell you car </a>
       </div>
       <div className="automobiles">
         <center>
@@ -182,7 +182,7 @@ function AutoMobiles() {
               With our expert team’s ratings and commentary, you’ll think you’ve
               just been on a test drive.
             </h5>
-            <button>Read full review</button>
+            <button className="read-full-review-button">Read full review</button>
           </div>
 
           <div className="card-images">
@@ -201,7 +201,7 @@ function AutoMobiles() {
               of researching with our hand-picked cars..
             </h5>
 
-            <button>Read full review</button>
+            <button className="read-full-review-button">Read full review</button>
           </div>
 
           <div className="card-images">
@@ -220,7 +220,8 @@ function AutoMobiles() {
               buying on finance..
             </h5>
 
-            <button>Read full review</button>
+            <button className="read-full-review-button">Read full review</button>
+
           </div>
         </div>
       </div>
