@@ -214,7 +214,7 @@ function AutoMobiles() {
               buying on finance..
             </h5>
 
-            <button>Read full review</button>
+            <button className="read-review-btn">Read full review</button>
           </div>
         </div>
       </div>

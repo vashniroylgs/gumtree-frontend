@@ -11,6 +11,7 @@ import Freelancing from "./Components/Freelance";
 import JobSectionMain from "./Components/JobSectionMain";
 import CarPage from "./Components/CarPage";
 import CarDetailedView from "./Components/CarDetailView";
+import PostAdCategory from "./Components/CategoryDropdownSell";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           path="/automobiles/carDetails/:id"
           Component={CarDetailedView}
         />
+        <Route exact path="/selectsellform" Component={PostAdCategory} />
       </Routes>
       <Homefooter />
     </>
