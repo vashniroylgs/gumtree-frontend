@@ -62,7 +62,7 @@ label {
   font-size: 15px;
   color: #000;
   font-weight: 600;
-  justify-content: start;
+  justify-content: flex-start;
 }
 select {
   background-color: rgba(248, 245, 241, 0.707);

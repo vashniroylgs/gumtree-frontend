@@ -11,6 +11,8 @@ import Freelancing from "./Components/Freelance";
 import JobSectionMain from "./Components/JobSectionMain";
 import CarPage from "./Components/CarPage";
 import CarDetailedView from "./Components/CarDetailView";
+import JobForm from "./Components/JobForm";
+
 import PostAdCategory from "./Components/CategoryDropdownSell";
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
         <Route exact path="/freelancing" Component={Freelancing} />
         <Route exact path="/jobs" Component={JobSectionMain} />
         <Route exact path="/automobiles/:carDetail" Component={CarPage} />
+        <Route exact path="/jobform" Component={JobForm} />
         <Route
           exact
           path="/automobiles/carDetails/:id"
