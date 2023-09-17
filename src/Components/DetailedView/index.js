@@ -1634,20 +1634,21 @@ const settings = {
   pauseOnHover: false,
 };
 
-function CarDetailedView() {
-  const { id } = useParams();
-
+function DetailedView() {
+  const { id, category } = useParams();
+  console.log(id, category);
   const [automobiles, setAutomobile] = useState([]);
   const [carouselimages, setCarouselImgaes] = useState([]);
   const singleCar = carsDetails.filter((car) => car.id == id);
-  const { title, Company } = singleCar[0];
+  const { title, Company, Description, images, carLocation } = singleCar[0];
   console.log(carouselimages);
   useEffect(() => {
-    fetch(`http://localhost:3009/automobiles/carDetails/${id}`)
+    fetch(`http://localhost:3009/${category}/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setAutomobile(data.automobile[0]);
         setCarouselImgaes(data.automobile[0].image_names);
+        console.log(data.automobile[0].image_names[0]);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -1697,7 +1698,7 @@ function CarDetailedView() {
           <div className="car-detailed-view-carousel-main-container">
             <Slider {...settings} className="car-detailed-view-carousel-slide">
               {carouselimages.map((imageName, index) => (
-                <div key={index}>
+                <div className="sai1" key={index}>
                   <img
                     src={`http://localhost:3009/${imageName}`}
                     alt={`Slide ${index}`}
@@ -1786,4 +1787,4 @@ function CarDetailedView() {
     </div>
   );
 }
-export default CarDetailedView;
+export default DetailedView;

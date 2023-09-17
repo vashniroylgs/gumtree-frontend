@@ -117,7 +117,7 @@ export class ElectronicsUploadForm extends Component {
       formData.append("images", this.state.images[i]);
     }
     console.log(formData);
-    fetch("http://localhost:3009/addelectronicad", {
+    fetch("http://localhost:3009/addelectronic", {
       method: "POST",
       body: formData,
     })
