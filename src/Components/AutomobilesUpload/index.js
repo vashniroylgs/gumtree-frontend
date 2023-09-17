@@ -315,7 +315,7 @@ export class AutomobilesUploadForm extends Component {
           <div className="upload-form-email-related-caution-container">
             <BsFillInfoCircleFill className="upload-form-email-related-caution-icon" />
             <p className="upload-form-email-related-caution-description">
-              All emails replies are sent via Gumtree message centre. To
+              All emails replies are sent via Bquest message centre. To
               determine and identify potential fraud, spam or suspicious
               behaviour, we anonymise your email address, and reserve the right
               to monitor conversations.
