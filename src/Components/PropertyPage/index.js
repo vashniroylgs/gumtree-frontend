@@ -7,7 +7,7 @@ import {
   import React, { useEffect, useState } from "react";
   import { CiLocationOn } from "react-icons/ci";
   import { GrCheckmark } from "react-icons/gr";
-  
+  import {Link} from "react-router-dom"
   import "./index.css";
   
   const porpertyDetails = [
@@ -406,6 +406,10 @@ import {
               </div>
               <div className="porperty-card-main-conatiner">
                 {properties.map((property, index) => (
+                   <Link
+                   to={`/property/${property.id}`}
+                   style={{ textDecoration: "none" }}
+                 >
                   <div className="porperty-card-conatiner" key={index}>
                     <div className="porperty-card-image-conatiner">
                       <img
@@ -446,6 +450,7 @@ import {
                       </div>
                     </div>
                   </div>
+                  </Link>
                 ))}
        
               </div>

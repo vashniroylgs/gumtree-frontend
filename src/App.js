@@ -18,7 +18,7 @@ import AutomobilesUploadForm from "./Components/AutomobilesUpload";
 import PropertyUploadForm from "./Components/PropertyUpload";
 import ElectronicsUploadForm from "./Components/Electronicsupload";
 import FreelanceForm from "./Components/Freelanceupload";
-
+import DetailedView from "./Components/DetailedView";
 function App() {
   return (
     <>
@@ -37,6 +37,11 @@ function App() {
           exact
           path="/automobiles/carDetails/:id"
           Component={CarDetailedView}
+        />
+        <Route
+          exact
+          path="/:category/:id"
+          Component={DetailedView}
         />
         <Route exact path="/selectsellform" Component={PostAdCategory} />
         <Route exact path="/automobilesuploadform" Component={AutomobilesUploadForm} />
