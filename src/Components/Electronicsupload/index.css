@@ -1,0 +1,295 @@
+.upload-form-main-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .upload-form-sub-container {
+    width: 60%;
+  }
+  
+  .upload-form-image-upload-main-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .upload-form-image-sub-container {
+    padding: 10px;
+    border: 1px dotted rgb(37, 127, 207);
+    height: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .upload-form-image-container {
+    display: inline-block;
+    background: rgb(230, 242, 247);
+    border-width: 2px;
+    border-color: #ffffff;
+    border-radius: 5px;
+  
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .upload-form-sub-container-heading {
+    margin-top: 0;
+    margin-bottom: 7px;
+    color: #3c3241;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 24px;
+  }
+  
+  .upload-form-image-label {
+    display: inline-block;
+    background: rgb(230, 242, 247);
+    text-align: center;
+    border-width: 1px;
+    border-color: #fff;
+    color: #000;
+    font-size: 12px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    cursor: pointer;
+    height: 15px;
+  }
+  
+  .upload-form-image-input {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  
+  .upload-form-image-para {
+    color: rgb(99, 91, 103);
+    font-size: 12px;
+  }
+  .upload-form-image-first-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .upload-form-vehicle-input-container {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  
+  .upload-form-vehicle-input {
+    height: 44px;
+    padding: 4px;
+    border: 1px solid #d8d6d9;
+    border-radius: 4px;
+    font-size: 16px;
+    background: rgb(253, 236, 48);
+    outline: none;
+    text-transform: uppercase;
+  }
+  
+  .upload-form-vehicle-button {
+    height: 52px;
+    line-height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid rgb(219, 218, 219);
+    background: green;
+    pointer-events: none;
+    color: white;
+  }
+  
+  .upload-form-vehicle-container-heading {
+    color: #3c3241;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 1;
+    padding: 8px 0px;
+  }
+  .upload-form-vehicle-container-heading-2 {
+    color: #3c3241;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 6px;
+  }
+  
+  .upload-from-vehicle-features-list {
+    list-style: none;
+    width: 30%;
+    padding: 10px;
+  }
+  
+  .upload-form-list-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90px;
+    overflow: hidden;
+  }
+  
+  .upload-form-list-container-show-more {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .upload-form-list-label {
+    padding: 6px 0 6px 10px;
+    min-width: 32px;
+    min-height: 32px;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .upload-form-title-container {
+    background: rgb(255, 255, 255);
+    position: relative;
+    padding: 0px;
+    display: block;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  .upload-form-title-input {
+    width: 100%;
+    height: 44px;
+    line-height: 20px;
+    padding: 4px 8px;
+    border: 1px solid #d8d6d9;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .upload-form-description-text-area {
+    width: 100%;
+    line-height: 20px;
+    padding: 0 8px;
+    border: 1px solid #d8d6d9;
+    font-family: "Arial", "sans-serif";
+    font-size: 16px;
+    border-radius: 4px/4px;
+    resize: none;
+    min-height: 100px;
+  }
+  
+  .upload-form-price-input-container {
+    border: 1px solid #b1adb3;
+    border-radius: 4px;
+    height: 38px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8px;
+    width: 50%;
+  }
+  
+  .upload-form-price-icon {
+    font-size: 24px;
+    color: #635b67;
+  }
+  
+  .upload-form-price-input {
+    border: none;
+    height: 30px;
+    background-color: transparent;
+    font-size: 13px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .upload-form-contact-details-heading {
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .upload-form-contact-details-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .upload-form-contact-details-sub-heading {
+    font-size: 16px;
+    color: #222;
+  }
+  .upload-form-contact-details-sub-heading-span {
+    font-weight: 600;
+  }
+  .upload-form-email-related-caution-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background-color: #e6fff5;
+    padding: 1.5%;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .upload-form-email-related-caution-icon {
+    font-size: 16px;
+    color: #ffc266;
+    display: flex;
+    align-self: flex-start;
+  }
+  .upload-form-email-related-caution-description {
+    font-size: 14px;
+    color: #222;
+    width: 100%;
+    text-align: left;
+  }
+  .upload-form-post-my-car-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    background-color: green !important;
+    border-radius: 25px !important;
+    margin-top: 10px;
+    padding: 4px 20px;
+  
+    margin-bottom: 10px;
+  }
+  .upload-form-terms-and-conditions-text {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .upload-form-see-more-link {
+    color: #007fb0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .upload-form-see-more-link:hover {
+    text-decoration: underline;
+  }
+  
+  .upload-form-see-more-link-no-more {
+    display: none;
+  }
+  
