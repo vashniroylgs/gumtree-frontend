@@ -24,7 +24,6 @@ const propertyDetails = [
     propertyDetail: "Commercial",
   },
 ];
-
 const HouseDetails = [
   {
     name: "1 BHK",
@@ -39,7 +38,6 @@ const HouseDetails = [
     propertyDetail: "3BHK",
   },
 ];
-
 export class PropertyUploadForm extends Component {
   state = {
     direction: "",
@@ -90,7 +88,7 @@ export class PropertyUploadForm extends Component {
     return (
       <div className="d-flex flex-column align-items-center mt-5">
         <select
-          value={this.state.selectedCar}
+          value={this.state.selectedPropertyLevel}
           onChange={this.handlePropertyLevelChange}
         >
           {HouseDetails.map((each) => (
@@ -124,7 +122,7 @@ export class PropertyUploadForm extends Component {
       formData.append("images", this.state.images[i]);
     }
     console.log(formData);
-    fetch("http://localhost:3009/addpropertyad", {
+    fetch("http://localhost:3009/addproperty", {
       method: "POST",
       body: formData,
     })
@@ -194,7 +192,7 @@ export class PropertyUploadForm extends Component {
             <div>
               <h2>Select a Property:</h2>
               <select
-                value={this.state.selectedCar}
+                value={this.state.selectedPropertyType}
                 onChange={this.handlePropertyChange}
               >
                 {propertyDetails.map((each) => (
