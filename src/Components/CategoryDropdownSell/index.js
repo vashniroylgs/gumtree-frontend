@@ -14,7 +14,7 @@ const PostAdCategory = () => {
   const submitCategory = () => {
     console.log(category);
     if (category === "electronics") {
-      navigate("/electronics");
+      navigate("/elctronicsuploadform");
     } else if (category === "automobiles") {
       navigate("/automobilesuploadform");
     } else if (category === "jobs") {
