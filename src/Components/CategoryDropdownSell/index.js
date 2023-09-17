@@ -20,7 +20,7 @@ const PostAdCategory = () => {
     } else if (category === "jobs") {
       navigate("/jobform");
     } else if (category === "freelance") {
-      navigate("/freelancing");
+      navigate("/freelanceuploadform");
     } else {
       navigate("/propertyuploadform");
     }

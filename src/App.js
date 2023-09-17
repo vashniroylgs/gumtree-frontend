@@ -17,6 +17,7 @@ import PostAdCategory from "./Components/CategoryDropdownSell";
 import AutomobilesUploadForm from "./Components/AutomobilesUpload";
 import PropertyUploadForm from "./Components/PropertyUpload";
 import ElectronicsUploadForm from "./Components/Electronicsupload";
+import FreelanceForm from "./Components/Freelanceupload";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route exact path="/automobilesuploadform" Component={AutomobilesUploadForm} />
         <Route exact  path="/propertyuploadform" Component={PropertyUploadForm} />
         <Route exact  path="/elctronicsuploadform" Component={ElectronicsUploadForm} />
+        <Route exact  path="/freelanceuploadform" Component={FreelanceForm} />
       </Routes>
       <Homefooter />
     </>
