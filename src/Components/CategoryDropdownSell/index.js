@@ -18,7 +18,7 @@ const PostAdCategory = () => {
     } else if (category === "automobiles") {
       navigate("/automobilesuploadform");
     } else if (category === "jobs") {
-      navigate("/jobs");
+      navigate("/jobform");
     } else if (category === "freelance") {
       navigate("/freelancing");
     } else {

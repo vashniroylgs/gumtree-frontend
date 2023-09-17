@@ -1,5 +1,5 @@
 import "./index.css";
-
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { useParams } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
@@ -1636,8 +1636,24 @@ const settings = {
 
 function CarDetailedView() {
   const { id } = useParams();
+  console.log(id);
+  const [automobiles, setAutomobile] = useState([]);
+  const [carouselimages,setCarouselImgaes]=useState([])
   const singleCar = carsDetails.filter((car) => car.id == id);
   const { title, Company, Description, images, carLocation } = singleCar[0];
+  console.log(carouselimages)
+  useEffect(() => {
+    console.log("use effect called");
+    fetch(`http://localhost:3009/automobiles/carDetails/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setAutomobile(data.automobile[0]);
+        setCarouselImgaes(data.automobile[0].image_names)
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   return (
     <div className="car-detailed-view-main-container">
@@ -1665,10 +1681,10 @@ function CarDetailedView() {
               {Company}{" "}
             </p>
           </div>
-          <h1 className="car-detailed-view-car-title">{title}</h1>
+          <h1 className="car-detailed-view-car-title">{automobiles.title}</h1>
           <div className="car-detailed-view-location-and-price-container">
-            <p className="car-detailed-view-location-name">{carLocation}</p>
-            <p className="car-detailed-view-car-price">£18,495.00</p>
+            <p className="car-detailed-view-location-name">{}</p>
+            <p className="car-detailed-view-car-price">£{automobiles.price}</p>
           </div>
           {/*<div className="car-detailed-view-carousel-main-container">
                     <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} interval={3000} style={{color:"#196AE5"}}>
@@ -1681,22 +1697,24 @@ function CarDetailedView() {
                     </div>*/}
           <div className="car-detailed-view-carousel-main-container">
             <Slider {...settings} className="car-detailed-view-carousel-slide">
-              {images.map((slide, index) => (
+           {carouselimages.map((imageName, index) => (
                 <div key={index}>
                   <img
-                    src={slide}
+                    src={`http://localhost:3009/${imageName}`}
                     alt={`Slide ${index}`}
                     className="car-detailed-view-carousel-image"
                   />
                 </div>
-              ))}
+              ))} 
             </Slider>
           </div>
           <div>
             <h1 className="car-detailed-view-description-heading">
               Description
             </h1>
-            <p className="car-detailed-view-description">{Description}</p>
+            <p className="car-detailed-view-description">
+              {automobiles.description}
+            </p>
           </div>
         </div>
         <div className="car-detailed-view-right-main-container">

@@ -144,7 +144,7 @@ function AutoMobiles() {
         <div className="images">
           {carDetails.map((car, index) => (
             <Link
-              to={`/automobiles/${car.carDetail}`}
+              to={`/automobiles/${car.name}`}
               key={index}
               style={{ textDecoration: "none" }}
             >

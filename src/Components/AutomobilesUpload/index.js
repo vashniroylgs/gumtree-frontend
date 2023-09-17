@@ -26,6 +26,51 @@ const carFeatures = [
   { id: 20, feature: "Electronic Stability Program" },
 ];
 
+const carDetails = [
+  {
+    name: "Volkswagen Polo",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694512101/mqlwpjl0zetttyes7g17.jpg",
+    carDetail: "volkswagen",
+  },
+  {
+    name: "Ford Fiesta",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694513185/z9mjcmy2wcvxaip1l0oz.jpg",
+    carDetail: "ford",
+  },
+  {
+    name: "Honda Civic",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694513330/bmle1f0vd8dpfnn96kbx.jpg",
+    carDetail: "honda",
+  },
+  {
+    name: "Toyota Supra",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694514762/t84tanyvh9re1bxujc4f.jpg",
+    carDetail: "toyota",
+  },
+  {
+    name: "Land Rover Defender",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694514972/a30rlsw3q9c6p6gcjveq.jpg",
+    carDetail: "landrover",
+  },
+  {
+    name: "Toyota Hilux",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694515368/fapsm4ewhwebwfq82av2.jpg",
+    carDetail: "toyota",
+  },
+  {
+    name: "Audi A3",
+    imageUrl:
+      "https://res.cloudinary.com/dcczhcvjg/image/upload/v1694515497/y5uwcljmgrahivmanhmn.jpg",
+    carDetail: "audi",
+  },
+];
+
 export class AutomobilesUploadForm extends Component {
   state = {
     vehicleNumber: "",
@@ -34,6 +79,8 @@ export class AutomobilesUploadForm extends Component {
     description: "",
     price: "",
     showMore: false,
+    images: [],
+    selectedCar: "",
   };
 
   takeVehicleNumber = (event) => {
@@ -57,6 +104,11 @@ export class AutomobilesUploadForm extends Component {
     this.setState({ showMore: !this.state.showMore });
   };
 
+  handleImageChange = (e) => {
+    const files = e.target.files;
+    this.setState({ images: [...files] }); // Use spread operator to create a new array
+  };
+
   toggleCheckbox = (event) => {
     const { value, checked } = event.target;
     this.setState((prevState) => {
@@ -71,15 +123,40 @@ export class AutomobilesUploadForm extends Component {
       }
     });
   };
-
-  postCarDetails = () => {
-    const { price, description, title, features, vehicleNumber } = this.state;
+  handleCarChange = (event) => {
+    this.setState({ selectedCar: event.target.value });
+  };
+  postCarDetails = (e) => {
+    e.preventDefault();
+    const { price, description, selectedCar, title, features, vehicleNumber } =
+      this.state;
+    const formData = new FormData();
+    formData.append("price", price);
+    formData.append("description", description);
+    formData.append("title", title); // Renamed 'price' to 'cost'
+    formData.append("vehicleNumber", vehicleNumber); // Added 'vehicleNumber'
+    formData.append("features", features.join(" "));
+    for (let i = 0; i < this.state.images.length; i++) {
+      formData.append("images", this.state.images[i]);
+    }
+    formData.append("selectedCar", selectedCar); // Added 'selectedCar'
+    console.log(formData);
+    fetch("http://localhost:3009/addautomobile", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // Handle the response data as needed
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   render() {
     const { vehicleNumber, title, description, price, showMore, features } =
       this.state;
-    console.log(features);
     const showMoreClassName = showMore
       ? "upload-form-list-container-show-more"
       : "upload-form-list-container";
@@ -96,9 +173,9 @@ export class AutomobilesUploadForm extends Component {
                   <input
                     className="upload-form-image-input"
                     type="file"
-                    accept="image/*"
+                    name="images"
                     multiple
-                    // onChange={this.handleImageUpload}
+                    onChange={this.handleImageChange}
                   />
                   <label
                     htmlFor="fileupload"
@@ -114,6 +191,18 @@ export class AutomobilesUploadForm extends Component {
               </div>
             </div>
           </div>
+          <div>
+            <h2>Select a Car:</h2>
+            <select
+              value={this.state.selectedCar}
+              onChange={this.handleCarChange}
+            >
+              {carDetails.map(each=>(
+                <option value={each.name}>{each.name}</option>
+              ))}
+            </select>
+          </div>
+          <p>You selected: {this.state.selectedCar}</p>
           <div className="upload-form-vehicle-container">
             <h2 className="upload-form-vehicle-container-heading">
               Vehicle specification*
