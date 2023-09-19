@@ -1641,7 +1641,7 @@ function CarDetailedView() {
   const [carouselimages, setCarouselImgaes] = useState([]);
   const singleCar = carsDetails.filter((car) => car.id == id);
   const { title, Company } = singleCar[0];
-  console.log(carouselimages);
+  console.log(automobiles);
   useEffect(() => {
     fetch(`http://localhost:3009/automobiles/carDetails/${id}`)
       .then((response) => response.json())

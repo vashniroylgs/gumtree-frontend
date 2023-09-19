@@ -1,8 +1,21 @@
 import { ImLocation } from "react-icons/im";
+import React, { useEffect, useState } from "react";
 import { BiHeart } from "react-icons/bi";
 import "./index.css";
 
 const Freelancing = (props) => {
+  const [electronics, setelectronics] = useState([]);
+  useEffect(() => {
+    // Fetch data from your server when the component mounts
+    fetch(`http://localhost:3009/getelectronics`)
+      .then((response) => response.json())
+      .then((data) => {
+        setelectronics(data.electronics);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
   const Category = () => (
     <div className="TotalcontractLabelInputCotainer p-3">
       <h4>Jobs</h4>
@@ -332,7 +345,6 @@ const Freelancing = (props) => {
         </div>
         {SalaryContainer()}
       </div>
-
       <div className="contentContainer">
         <div>
           <div className="gumtree-freelance-cards">
@@ -419,7 +431,6 @@ const Freelancing = (props) => {
               <p className="gumtree-freelance-paragraph">6 days ago</p>
             </div>
           </div>
-
           <div className="gumtree-freelance-cards">
             <div className="gumtree-freelance-top-line">
               <button className="gumtree-freelance-button">Featured</button>

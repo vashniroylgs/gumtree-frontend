@@ -10,33 +10,38 @@ class FreelanceForm extends Component {
     role: "",
     experience: "",
     description: "",
-    photo: "",
+    images: [],
   };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
+  handleImageChange = (e) => {
+    const file = e.target.files;
+    console.log("called", file);
+    this.setState({ images: file }); // Use spread operator to create a new array
+  };
 
   handleJobForm = async (event) => {
     event.preventDefault();
-    const body = {
-      name: this.state.name,
-      email: this.state.email,
-      location: this.state.location,
-      role: this.state.role,
-      experience: this.state.experience,
-      description: this.state.description,
-      photo: this.state.photo,
-    };
-
+    const { description, name, email, role, experience, location } = this.state;
+    console.log(description,name,email,role)
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("location", location);
+    formData.append("role", role);
+    formData.append("experience", experience);
+    formData.append("description", description);
+    for (let i = 0; i < this.state.images.length; i++) {
+      formData.append("images", this.state.images[i]);
+    }
+    console.log(formData);
     try {
-      const response = await fetch("http://localhost:3005/freelanceform", {
+      const response = await fetch("http://localhost:3009/freelanceform", {
         method: "POST",
-        body: JSON.stringify(body),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        body:formData,
       });
 
       if (response.ok) {
@@ -56,6 +61,7 @@ class FreelanceForm extends Component {
   };
 
   render() {
+    console.log(this.state.images);
     return (
       <div className="freelance-form-main-container">
         <form
@@ -143,8 +149,8 @@ class FreelanceForm extends Component {
                 type="file"
                 placeholder="Enter the Relavant experience"
                 className="freelance-form-input-field freelance-upload-button"
-                onChange={this.handleInputChange}
-                name="experience"
+                onChange={this.handleImageChange}
+                single
                 required
               />
             </div>

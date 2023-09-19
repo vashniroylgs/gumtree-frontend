@@ -330,7 +330,7 @@ export class PropertyUploadForm extends Component {
             className="upload-form-post-my-car-button"
             onClick={this.postCarDetails}
           >
-            Post my Car
+            Post my Ad
           </button>
           <p className="upload-form-terms-and-conditions-text">
             By selecting Post My Ad you agree you've read and accepted our Terms

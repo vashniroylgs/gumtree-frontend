@@ -10,6 +10,18 @@ const HomePage = () => {
           <FeaturedCategories />
           <DiscoveredFinds />
         </div>
+        <div className="ad-container">
+          
+        </div>
+        <div className="ad-container1">
+          
+          </div>
+          <div className="ad-container2">
+          
+          </div>
+          <div className="ad-container3">
+          
+          </div>
       </div>
     </>
   );
