@@ -125,8 +125,9 @@ export class ElectronicsUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
-        const navigate = useNavigate("")
-        navigate("/")
+        alert("Ad Posted successfully");
+        const navigate = useNavigate("");
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);

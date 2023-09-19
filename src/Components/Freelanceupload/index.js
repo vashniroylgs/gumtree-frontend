@@ -48,6 +48,7 @@ class FreelanceForm extends Component {
         const data = await response.json();
         console.log(data);
         this.setState({ success_message: data.success_msg });
+        alert("Your Ad is posted succesfully")
         const navigate = useNavigate("");
         navigate("/")
       } else {

@@ -184,10 +184,15 @@
 }
 
 .porperty-card-image-conatiner-image {
-  height: 100%;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+ 
+
+ max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+
+  max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+
+  display: block; /* Remove extra spacing below the image */
+
+  margin: auto;
 }
 .porperty-card-content-conatiner {
   display: flex;

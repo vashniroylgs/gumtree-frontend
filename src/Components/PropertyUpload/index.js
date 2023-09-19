@@ -130,7 +130,7 @@ export class PropertyUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
-        alert("Ad Posted successfully");
+        alert("Your Ad Posted successfully");
         const navigate = useNavigate("");
         navigate("/");
       })

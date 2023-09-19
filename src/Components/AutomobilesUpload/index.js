@@ -149,6 +149,7 @@ export class AutomobilesUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
+        alert("Your Ad posted successfully");
         const navigate = useNavigate("");
         navigate("/");
       })

@@ -261,7 +261,7 @@ function Electronics() {
                     </div>
                     <div className="electronics-card-second-container">
                       <BsHeart className="electronics-card-heart" />
-                      <p>xxxx</p>
+                      <p>Hyderbad</p>
                     </div>
                   </div>
                 </div>

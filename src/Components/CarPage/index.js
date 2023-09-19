@@ -1551,6 +1551,7 @@ const carsDetails = [
 function CarPage() {
   const { carDetail } = useParams();
   const [automobiles, setAutomobiles] = useState([]);
+  console.log(automobiles)
   useEffect(() => {
     // Fetch data from your server when the component mounts
     fetch(`http://localhost:3009/getautomobiles/${carDetail}`)
@@ -1685,14 +1686,14 @@ function CarPage() {
                       </div>
                       <div className="porperty-card-content-conatiner-list-elements">
                         <span className="porperty-card-content-conatiner-list-element">
-                         XXXXXX
+                        {property.selectedCar}
                         </span>
                         <span className="porperty-card-content-conatiner-list-element">
-                        XXXXXX
+                        {property.features}
                         </span>
-                        <span className="porperty-card-content-conatiner-list-element">
-                        XXXXXX
-                        </span>
+                          {/* <span className="porperty-card-content-conatiner-list-element">
+                          XXXXXX
+                          </span> */}
                       </div>
                       <p className="porperty-card-content-conatiner-location">
                         XXXXXX
@@ -1702,7 +1703,7 @@ function CarPage() {
                           {property.price}
                         </p>
                         <p className="porperty-card-content-conatiner-time-item">
-                          XXXXXX
+                        {property.selectedCar}
                         </p>
                       </div>
                     </div>
