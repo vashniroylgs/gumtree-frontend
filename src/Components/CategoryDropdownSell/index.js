@@ -14,15 +14,15 @@ const PostAdCategory = () => {
   const submitCategory = () => {
     console.log(category);
     if (category === "electronics") {
-      navigate("/electronics");
+      navigate("/elctronicsuploadform");
     } else if (category === "automobiles") {
       navigate("/automobilesuploadform");
     } else if (category === "jobs") {
-      navigate("/jobs");
+      navigate("/jobform");
     } else if (category === "freelance") {
-      navigate("/freelancing");
+      navigate("/freelanceuploadform");
     } else {
-      navigate("/properties");
+      navigate("/propertyuploadform");
     }
   };
 

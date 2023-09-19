@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  font-family: "Roboto";
+}
+
+.freelance-form-main-container{
+    width:90%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:1.5% 0%;
+}
+.freelance-form-sub-container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:50%;
+    min-width:300px;
+    padding:1.5%;
+}
+.freelance-form-main-heading{
+    font-size:24px;
+    color:#222;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:20px;
+}
+.freelance-form-fill-container{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    
+}
+.freelance-form-input-container{
+    display:flex;
+    flex-direction: column;
+    gap:4px;
+    width:30%;
+}
+.freelance-form-input-label-name{
+    font-size:18px;
+    color:#222;
+    padding:0px;
+    margin:0px;
+}
+.freelance-form-input-label-star{
+    color:red;
+}
+.freelance-form-input-field{
+    border-radius:4px;
+    padding:4px 10px;
+    font-size:16px;
+    color:#222;
+    border:2px solid #222;
+    width:100%;
+}
+.freelance-form-submit-button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-size:18px;
+    color:#fff;
+    background-color:green !important;
+    border-radius:25px !important;
+    margin-top:10px;
+    padding:4px 20px;
+}
+input[type=file]::file-selector-button{
+    background-color:green;
+    border:none;
+    border-radius:4px;
+    color:#fff;
+    width:max-content;
+}
+.freelance-upload-button{
+    border:none;
+    display:inline;
+}

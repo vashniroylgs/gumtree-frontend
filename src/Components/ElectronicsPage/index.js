@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 import { LuBellPlus } from "react-icons/lu";
 import { MdLocationPin } from "react-icons/md";
 import { AiOutlineLeft } from "react-icons/ai";
@@ -135,6 +136,19 @@ const categoryList = [
 ];
 
 function Electronics() {
+  const [electronics, setelectronics] = useState([]);
+  useEffect(() => {
+    // Fetch data from your server when the component mounts
+    fetch(`http://localhost:3009/getelectronics`)
+      .then((response) => response.json())
+      .then((data) => {
+        setelectronics(data.electronics);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
     <div className="electronics-main-container">
       <div className="electronincs-first-container">
@@ -222,31 +236,36 @@ function Electronics() {
             </div>
           </div>
           <div className="electronics-right-section">
-            {productDetailList.map((eachProduct) => (
-              <div className="electronics-right-section-card">
-                <img
-                  src={eachProduct.image}
-                  className="electronics-card-image"
-                />
-                <div className="electronics-card-text-container">
-                  <div className="electronics-card-first-container">
-                    <h1 className="electronics-right-section-card-heading">
-                      {eachProduct.productName}
-                    </h1>
-                    <p className="electronics-right-section-card-para">
-                      {eachProduct.location}
-                    </p>
-                    <p className="electronics-card-price">
-                      <BsCurrencyPound />
-                      {eachProduct.cost}
-                    </p>
-                  </div>
-                  <div className="electronics-card-second-container">
-                    <BsHeart className="electronics-card-heart" />
-                    <p>{eachProduct.day}</p>
+            {electronics.map((eachProduct) => (
+              <Link
+                to={`/electronic/${eachProduct.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <div className="electronics-right-section-card">
+                  <img
+                    src={`http://localhost:3009/${eachProduct.image_names[0]}`}
+                    className="electronics-card-image"
+                  />
+                  <div className="electronics-card-text-container">
+                    <div className="electronics-card-first-container">
+                      <h1 className="electronics-right-section-card-heading">
+                        {eachProduct.title}
+                      </h1>
+                      <p className="electronics-right-section-card-para">
+                        {eachProduct.description}
+                      </p>
+                      <p className="electronics-card-price">
+                        <BsCurrencyPound />
+                        {eachProduct.price}
+                      </p>
+                    </div>
+                    <div className="electronics-card-second-container">
+                      <BsHeart className="electronics-card-heart" />
+                      <p>xxxx</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

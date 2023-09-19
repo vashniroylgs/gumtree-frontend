@@ -4,9 +4,10 @@ import {
     AiOutlineCaretDown,
     AiOutlineHeart,
   } from "react-icons/ai";
+  import React, { useEffect, useState } from "react";
   import { CiLocationOn } from "react-icons/ci";
   import { GrCheckmark } from "react-icons/gr";
-  
+  import {Link} from "react-router-dom"
   import "./index.css";
   
   const porpertyDetails = [
@@ -290,6 +291,20 @@ import {
     ];
   
   const Property = () => {
+    const [properties, setproperties] = useState([]);
+    useEffect(() => {
+      // Fetch data from your server when the component mounts
+      fetch(`http://localhost:3009/getproperties`)
+        .then((response) => response.json())
+        .then((data) => {
+          setproperties(data.properties);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }, []);
+
+
     return (
       <div className="propertypage-main-container">
         <div className="propertypage-main-container1">
@@ -390,11 +405,15 @@ import {
                 </div>
               </div>
               <div className="porperty-card-main-conatiner">
-                {porpertyDetails.map((property, index) => (
+                {properties.map((property, index) => (
+                   <Link
+                   to={`/property/${property.id}`}
+                   style={{ textDecoration: "none" }}
+                 >
                   <div className="porperty-card-conatiner" key={index}>
                     <div className="porperty-card-image-conatiner">
                       <img
-                        src={property.Image}
+                        src={`http://localhost:3009/${property.image_names[0]}`}
                         alt=""
                         className="porperty-card-image-conatiner-image"
                       />
@@ -402,13 +421,13 @@ import {
                     <div className="porperty-card-content-conatiner">
                       <div className="porperty-card-content-conatiner-heading-content">
                         <h1 className="porperty-card-content-conatiner-heading">
-                          {property.Title}
+                          {property.title}
                         </h1>
                         <AiOutlineHeart
                           style={{ color: "red", fontSize: "22px" }}
                         />
                       </div>
-                      <div className="porperty-card-content-conatiner-list-elements">
+                      {/* <div className="porperty-card-content-conatiner-list-elements">
                         {property.Features.map((feature, i) => (
                           <span
                             className="porperty-card-content-conatiner-list-element"
@@ -417,20 +436,21 @@ import {
                             {feature}
                           </span>
                         ))}
-                      </div>
+                      </div> */}
                       <p className="porperty-card-content-conatiner-location">
-                        {property.Subtitle}
+                        xxxx
                       </p>
                       <div className="porperty-card-content-conatiner-cost">
                         <p className="porperty-card-content-conatiner-cost-item">
-                          {property.Cost}
+                          {property.price}
                         </p>
                         <p className="porperty-card-content-conatiner-time-item">
-                          {property.Time}
+                          xxxx
                         </p>
                       </div>
                     </div>
                   </div>
+                  </Link>
                 ))}
        
               </div>

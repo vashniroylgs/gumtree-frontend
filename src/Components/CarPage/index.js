@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineBell,
   AiOutlineCaretLeft,
@@ -1549,7 +1550,19 @@ const carsDetails = [
 
 function CarPage() {
   const { carDetail } = useParams();
-  const filteredCars = carsDetails.filter((car) => car.Company === carDetail);
+  const [automobiles, setAutomobiles] = useState([]);
+  useEffect(() => {
+    // Fetch data from your server when the component mounts
+    fetch(`http://localhost:3009/getautomobiles/${carDetail}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setAutomobiles(data.automobiles);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+  // const filteredCars = carsDetails.filter((car) => car.Company === carDetail);
   return (
     <div className="propertypage-main-container">
       <div className="propertypage-main-container1">
@@ -1648,7 +1661,7 @@ function CarPage() {
               </div>
             </div>
             <div className="porperty-card-main-conatiner">
-              {filteredCars.map((property, index) => (
+              {automobiles.map((property, index) => (
                 <Link
                   to={`/automobiles/carDetails/${property.id}`}
                   style={{ textDecoration: "none" }}
@@ -1656,7 +1669,7 @@ function CarPage() {
                   <div className="porperty-card-conatiner" key={index}>
                     <div className="porperty-card-image-conatiner">
                       <img
-                        src={property.images[0]}
+                        src={`http://localhost:3009/${property.image_names[0]}`}
                         alt=""
                         className="porperty-card-image-conatiner-image"
                       />
@@ -1672,24 +1685,24 @@ function CarPage() {
                       </div>
                       <div className="porperty-card-content-conatiner-list-elements">
                         <span className="porperty-card-content-conatiner-list-element">
-                          {property.Transmission}
+                         XXXXXX
                         </span>
                         <span className="porperty-card-content-conatiner-list-element">
-                          {property.Year}
+                        XXXXXX
                         </span>
                         <span className="porperty-card-content-conatiner-list-element">
-                          {property.FuelType}
+                        XXXXXX
                         </span>
                       </div>
                       <p className="porperty-card-content-conatiner-location">
-                        {property.carLocation}
+                        XXXXXX
                       </p>
                       <div className="porperty-card-content-conatiner-cost">
                         <p className="porperty-card-content-conatiner-cost-item">
-                          {property.carPrice}
+                          {property.price}
                         </p>
                         <p className="porperty-card-content-conatiner-time-item">
-                          {property.Time}
+                          XXXXXX
                         </p>
                       </div>
                     </div>
