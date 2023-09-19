@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./index.css";
 import { BiPound } from "react-icons/bi";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const propertyDirection = [
   { id: 1, feature: "East" },
@@ -129,6 +130,9 @@ export class PropertyUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
+        alert("Ad Posted successfully");
+        const navigate = useNavigate("");
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -171,6 +175,7 @@ export class PropertyUploadForm extends Component {
                     className="upload-form-image-input"
                     type="file"
                     name="images"
+                    accept=".jpg, .jpeg, .png"
                     multiple
                     onChange={this.handleImageChange}
                   />

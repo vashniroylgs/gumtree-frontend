@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import './index.css'
 
 import {Component} from 'react'
@@ -45,6 +46,8 @@ class JobForm extends Component {
               const data = await response.json();
               console.log(data)
               this.setState({success_message:data.success_msg})
+              const navigate = useNavigate("")
+              navigate("/")
             } else {
                 const data = await response.json();
                 console.log(data)

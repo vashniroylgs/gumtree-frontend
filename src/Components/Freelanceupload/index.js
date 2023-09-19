@@ -1,5 +1,5 @@
 import "./index.css";
-
+import { useNavigate } from "react-router-dom";
 import { Component } from "react";
 
 class FreelanceForm extends Component {
@@ -43,6 +43,8 @@ class FreelanceForm extends Component {
         const data = await response.json();
         console.log(data);
         this.setState({ success_message: data.success_msg });
+        const navigate = useNavigate("");
+        navigate("/")
       } else {
         const data = await response.json();
         console.log(data);

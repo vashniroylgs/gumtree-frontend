@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./index.css";
 import { BiPound } from "react-icons/bi";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const carFeatures = [
   { id: 1, feature: "AUX/USB Input Socket" },
@@ -148,6 +149,8 @@ export class AutomobilesUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
+        const navigate = useNavigate("");
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -173,6 +176,7 @@ export class AutomobilesUploadForm extends Component {
                   <input
                     className="upload-form-image-input"
                     type="file"
+                    accept=".jpg, .jpeg, .png"
                     name="images"
                     multiple
                     onChange={this.handleImageChange}
@@ -197,7 +201,7 @@ export class AutomobilesUploadForm extends Component {
               value={this.state.selectedCar}
               onChange={this.handleCarChange}
             >
-              {carDetails.map(each=>(
+              {carDetails.map((each) => (
                 <option value={each.name}>{each.name}</option>
               ))}
             </select>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./index.css";
 import { BiPound } from "react-icons/bi";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const itemDetails = [
   {
@@ -124,6 +125,8 @@ export class ElectronicsUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
+        const navigate = useNavigate("")
+        navigate("/")
       })
       .catch((error) => {
         console.error(error);
@@ -147,6 +150,7 @@ export class ElectronicsUploadForm extends Component {
                   <input
                     className="upload-form-image-input"
                     type="file"
+                    accept=".jpg, .jpeg, .png"
                     name="images"
                     multiple
                     onChange={this.handleImageChange}

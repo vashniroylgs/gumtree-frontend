@@ -298,6 +298,7 @@ import {
         .then((response) => response.json())
         .then((data) => {
           setproperties(data.properties);
+
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
