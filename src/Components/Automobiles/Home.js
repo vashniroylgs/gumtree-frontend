@@ -176,7 +176,7 @@ function AutoMobiles() {
               With our expert team’s ratings and commentary, you’ll think you’ve
               just been on a test drive.
             </h5>
-            <button className="read-full-review-button">Read full review</button>
+            <button className="read-review-btn">Read full review</button>
           </div>
 
           <div className="card-images">
@@ -195,7 +195,7 @@ function AutoMobiles() {
               of researching with our hand-picked cars..
             </h5>
 
-            <button className="read-full-review-button">Read full review</button>
+            <button className="read-review-btn">Read full review</button>
           </div>
 
           <div className="card-images">
