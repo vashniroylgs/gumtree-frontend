@@ -80,7 +80,7 @@ export class AutomobilesUploadForm extends Component {
     price: "",
     showMore: false,
     images: [],
-    selectedCar: "",
+    selectedCar: "Volkswagen Polo",
   };
 
   takeVehicleNumber = (event) => {
@@ -197,7 +197,7 @@ export class AutomobilesUploadForm extends Component {
               value={this.state.selectedCar}
               onChange={this.handleCarChange}
             >
-              {carDetails.map(each=>(
+              {carDetails.map((each) => (
                 <option value={each.name}>{each.name}</option>
               ))}
             </select>
