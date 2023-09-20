@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { useParams } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CiLocationOn } from "react-icons/ci";
 
 import {
   BsFillTelephoneFill,
@@ -11,7 +12,7 @@ import {
   BsFillCaretDownFill,
 } from "react-icons/bs";
 import { MdDescription, MdReportProblem } from "react-icons/md";
-  
+
 //icons
 import { RiArrowDropLeftLine } from "react-icons/ri";
 
@@ -1654,6 +1655,8 @@ function CarDetailedView() {
       });
   }, []);
 
+  console.log(automobiles);
+
   return (
     <div className="car-detailed-view-main-container">
       <div className="car-detailed-view-sub-container">
@@ -1697,7 +1700,10 @@ function CarDetailedView() {
           <div className="car-detailed-view-carousel-main-container">
             <Slider {...settings} className="car-detailed-view-carousel-slide">
               {carouselimages.map((imageName, index) => (
-                <div key={index} className="car-detailed-view-carousel-slide-img-container">
+                <div
+                  key={index}
+                  className="car-detailed-view-carousel-slide-img-container"
+                >
                   <img
                     src={`http://localhost:3009/${imageName}`}
                     alt={`Slide ${index}`}
@@ -1706,6 +1712,23 @@ function CarDetailedView() {
                 </div>
               ))}
             </Slider>
+          </div>
+          <div className="car-detailed-view-details-container">
+          
+            <div className="car-detail-view-location-container">
+              <span className="car-detail-view-salary-heading mr-2">Car-Type:</span>
+              <p>{automobiles.selectedCar}</p>
+            </div>
+            <div className="car-detail-view-location-container">
+              <span className="car-detail-view-salary-heading mr-2">
+              Features:
+              </span>
+              <p>{automobiles.features} </p>
+            </div>
+            <div className="car-detail-view-location-container">
+              <span className="car-detail-view-salary-heading mr-2">Price:</span>
+              <p>{automobiles.price}</p>
+            </div>
           </div>
           <div>
             <h1 className="car-detailed-view-description-heading">

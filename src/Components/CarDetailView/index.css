@@ -92,6 +92,8 @@
 .car-detailed-view-carousel-slide .car-detailed-view-carousel-image {
   
   
+
+
 }
 .car-detailed-view-description-heading {
   font-size: 24px;
@@ -536,4 +538,28 @@
 }
 .car-detailed-view-right-vehicle-history-paragraph {
   padding: 10px;
+}
+
+.car-detailed-view-details-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.car-detail-view-location-container {
+  display: flex;
+}
+
+.car-detail-view-location-icon {
+  font-size: 20px;
+}
+
+.car-detail-view-salary-heading {
+  font-weight: bold;
+}
+
+.car-detailed-view-carousel-image{
+    width: 300px;
+    height: 250px;
 }
