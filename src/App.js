@@ -12,13 +12,14 @@ import JobSectionMain from "./Components/JobSectionMain";
 import CarPage from "./Components/CarPage";
 import CarDetailedView from "./Components/CarDetailView";
 import JobForm from "./Components/JobForm";
-
+import JobDetailedView from "./Components/JobDetailedView";
 import PostAdCategory from "./Components/CategoryDropdownSell";
 import AutomobilesUploadForm from "./Components/AutomobilesUpload";
 import PropertyUploadForm from "./Components/PropertyUpload";
 import ElectronicsUploadForm from "./Components/Electronicsupload";
 import FreelanceForm from "./Components/Freelanceupload";
 import DetailedView from "./Components/DetailedView";
+import FreelanceDetailedView from "./Components/FreelanceDetailView";
 function App() {
   return (
     <>
@@ -48,6 +49,8 @@ function App() {
         <Route exact  path="/propertyuploadform" Component={PropertyUploadForm} />
         <Route exact  path="/elctronicsuploadform" Component={ElectronicsUploadForm} />
         <Route exact  path="/freelanceuploadform" Component={FreelanceForm} />
+        <Route exact path="/jobDetail/:id" Component={JobDetailedView} />
+        <Route exact path="/freelance/:id" Component={FreelanceDetailedView} />
       </Routes>
       <Homefooter />
     </>

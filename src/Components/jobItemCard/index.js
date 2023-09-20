@@ -1,7 +1,7 @@
 import "./index.css";
 import React, { Component } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
-
+import {Link} from "react-router-dom"
 // const JobList = [
 //   {
 //     id: 1,
@@ -216,6 +216,10 @@ class JobCard extends Component {
     return (
       <ul className="jobcard-main-list-container">
         {JobList.map((each) => (
+          <Link
+          to={`/jobDetail/${each.id}`}
+          style={{ textDecoration: "none" }}
+        >
           <li className="Jobcard-main-container" key={each.id}>
             <div className="Jobcard-top-section-container">
               <div className="Jobcard-top-section-sub-container">
@@ -246,6 +250,7 @@ class JobCard extends Component {
               <p className="Jobcard-bottom-section-time">7 days ago</p>
             </div>
           </li>
+          </Link>
         ))}
       </ul>
     );

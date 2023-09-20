@@ -13,6 +13,7 @@ class FreelanceForm extends Component {
     images: [],
   };
 
+
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });

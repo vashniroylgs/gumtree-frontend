@@ -2,15 +2,18 @@ import { ImLocation } from "react-icons/im";
 import React, { useEffect, useState } from "react";
 import { BiHeart } from "react-icons/bi";
 import "./index.css";
+import { Link } from "react-router-dom";
 
-const Freelancing = (props) => {
+const Freelancing = () => {
   const [electronics, setelectronics] = useState([]);
+
   useEffect(() => {
-    // Fetch data from your server when the component mounts
-    fetch(`http://localhost:3009/getelectronics`)
+    fetch("http://localhost:3009/getfreelance")
       .then((response) => response.json())
       .then((data) => {
-        setelectronics(data.electronics);
+        console.log(data.jobs);
+        setelectronics(data.jobs );
+        
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -315,8 +318,9 @@ const Freelancing = (props) => {
       </select>
     </div>
   );
-
+  
   return (
+    
     <div className="TotalFilterationContainer">
       <div className="filterationContainer   p-2">
         {LocationDetails()}
@@ -347,103 +351,32 @@ const Freelancing = (props) => {
       </div>
       <div className="contentContainer">
         <div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">Part Time Gardening</h1>
-            <p className="gumtree-freelance-paragraph">Tunbridge Wells, Kent</p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">10€ per hour.</p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">Labourer</h1>
-            <p className="gumtree-freelance-paragraph">
-              Potters Bar, Hertfordshire
-            </p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">10€ </p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">Barber</h1>
-            <p className="gumtree-freelance-paragraph">
-              West bridgford, Nottinghamshire
-            </p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">self employed basis</p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">
-              Book Cover Designers and Book Readers
-            </h1>
-            <p className="gumtree-freelance-paragraph">United Kingdom</p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">up to 10000€ per annum.</p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">Agency Breakfast Chef</h1>
-            <p className="gumtree-freelance-paragraph">Tunbridge Wells, Kent</p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">17€ per hour.</p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">Carpenter</h1>
-            <p className="gumtree-freelance-paragraph">Tunbridge Wells, Kent</p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">10€ per hour.</p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
-          <div className="gumtree-freelance-cards">
-            <div className="gumtree-freelance-top-line">
-              <button className="gumtree-freelance-button">Featured</button>
-              <BiHeart className="gumtree-freelance-heart-color" />
-            </div>
-            <h1 className="gumtree-freelance-heading">Carpenter</h1>
-            <p className="gumtree-freelance-paragraph">Tunbridge Wells, Kent</p>
-            <p className="gumtree-freelance-paragraph">Freelance</p>
-            <div className="gumtree-freelance-top-line">
-              <p className="gumtree-freelance-euros">10€ per hour.</p>
-              <p className="gumtree-freelance-paragraph">6 days ago</p>
-            </div>
-          </div>
+          <ul>
+            {electronics.map((each) => (
+              <Link
+                to={`/freelance/${each.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <div className="gumtree-freelance-cards">
+                  <div className="gumtree-freelance-top-line">
+                    <button className="gumtree-freelance-button">
+                      Featured
+                    </button>
+                    <BiHeart className="gumtree-freelance-heart-color" />
+                  </div>
+                  <h1 className="gumtree-freelance-heading">Carpenter</h1>
+                  <p className="gumtree-freelance-paragraph">
+                    Tunbridge Wells, Kent
+                  </p>
+                  <p className="gumtree-freelance-paragraph">Freelance</p>
+                  <div className="gumtree-freelance-top-line">
+                    <p className="gumtree-freelance-euros">10€ per hour.</p>
+                    <p className="gumtree-freelance-paragraph">6 days ago</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
