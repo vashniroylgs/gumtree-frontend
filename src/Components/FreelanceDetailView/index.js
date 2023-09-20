@@ -1736,6 +1736,32 @@ function FreelanceDetailedView() {
               {automobiles.description}
             </p>
           </div>
+          <div className="upload-form-contact-details-container">
+                <p className="upload-form-contact-details-sub-heading">
+                  Name:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    Raju
+                  </span>
+                </p>
+                <p className="upload-form-contact-details-sub-heading">
+                  Location:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    Hyderbad
+                  </span>
+                </p>
+                <p className="upload-form-contact-details-sub-heading">
+                  Email:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    lgs@gmail.com
+                  </span>
+                </p>
+                <p className="upload-form-contact-details-sub-heading">
+                  Phone:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    1234567890
+                  </span>
+                </p>
+          </div>
         </div>
         <div className="car-detailed-view-right-main-container">
           <div className="car-detailed-view-right-detailed-card">
