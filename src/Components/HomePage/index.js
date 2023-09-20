@@ -5,7 +5,7 @@ import "./index.css";
 const HomePage = () => {
   return (
     <>
-      <div className="home-main-contianer" style={{"width":"100vw"}}>
+      <div className="home-main-contianer" style={{"max-width":"100vw"}}>
         <div className="home-mini-all-categories-contianer" style={{"width":"75%"}}>
           <FeaturedCategories />
           <DiscoveredFinds />
