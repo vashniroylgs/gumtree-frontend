@@ -1695,7 +1695,7 @@ function FreelanceDetailedView() {
               <img
                 src={`http://localhost:3009/${automobiles.images}`}
                 alt={`Slide 1`}
-                className="car-detailed-view-carousel-image"
+                className="freelacing-detailed-view-carousel-image"
               />
             </div>
           </div>
