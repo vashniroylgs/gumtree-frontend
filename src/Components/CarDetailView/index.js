@@ -11,7 +11,7 @@ import {
   BsFillCaretDownFill,
 } from "react-icons/bs";
 import { MdDescription, MdReportProblem } from "react-icons/md";
-  
+
 //icons
 import { RiArrowDropLeftLine } from "react-icons/ri";
 
@@ -1697,7 +1697,10 @@ function CarDetailedView() {
           <div className="car-detailed-view-carousel-main-container">
             <Slider {...settings} className="car-detailed-view-carousel-slide">
               {carouselimages.map((imageName, index) => (
-                <div key={index} className="car-detailed-view-carousel-slide-img-container">
+                <div
+                  key={index}
+                  className="car-detailed-view-carousel-slide-img-container"
+                >
                   <img
                     src={`http://localhost:3009/${imageName}`}
                     alt={`Slide ${index}`}
@@ -1715,7 +1718,34 @@ function CarDetailedView() {
               {automobiles.description}
             </p>
           </div>
+          <div className="upload-form-contact-details-container">
+            <p className="upload-form-contact-details-sub-heading">
+              Name:{" "}
+              <span className="upload-form-contact-details-sub-heading-span">
+                Raju
+              </span>
+            </p>
+            <p className="upload-form-contact-details-sub-heading">
+              Location:{" "}
+              <span className="upload-form-contact-details-sub-heading-span">
+                Hyderbad
+              </span>
+            </p>
+            <p className="upload-form-contact-details-sub-heading">
+              Email:{" "}
+              <span className="upload-form-contact-details-sub-heading-span">
+                lgs@gmail.com
+              </span>
+            </p>
+            <p className="upload-form-contact-details-sub-heading">
+              Phone:{" "}
+              <span className="upload-form-contact-details-sub-heading-span">
+                1234567890
+              </span>
+            </p>
+          </div>
         </div>
+
         <div className="car-detailed-view-right-main-container">
           <div className="car-detailed-view-right-detailed-card">
             <div className="car-detailed-view-right-detailed-card-first">
