@@ -241,10 +241,12 @@ function Electronics() {
                 style={{ textDecoration: "none" }}
               >
                 <div className="electronics-right-section-card">
+                  <div className="electronics-card-image-container">
                   <img
                     src={`http://localhost:3009/${eachProduct.image_names[0]}`}
                     className="electronics-card-image"
                   />
+                  </div>
                   <div className="electronics-card-text-container">
                     <div className="electronics-card-first-container">
                       <h1 className="electronics-right-section-card-heading">
