@@ -242,10 +242,10 @@ function Electronics() {
               >
                 <div className="electronics-right-section-card">
                   <div className="electronics-card-image-container">
-                  <img
-                    src={`http://localhost:3009/${eachProduct.image_names[0]}`}
-                    className="electronics-card-image"
-                  />
+                    <img
+                      src={`http://localhost:3009/${eachProduct.image_names[0]}`}
+                      className="electronics-card-image"
+                    />
                   </div>
                   <div className="electronics-card-text-container">
                     <div className="electronics-card-first-container">
@@ -270,6 +270,18 @@ function Electronics() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="proprtypage-main-container2">
+        <img
+          className="propertypage-add2-image"
+          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
+          alt=""
+        />
+        <img
+          className="propertypage-add2-image"
+          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
+          alt=""
+        />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { useParams } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CiLocationOn } from "react-icons/ci";
 
 import {
   BsFillTelephoneFill,
@@ -1646,7 +1647,7 @@ function FreelanceDetailedView() {
       .then((response) => response.json())
       .then((data) => {
         setAutomobile(data.freelancedetail);
-        console.log(data.freelancedetail)
+        console.log(data.freelancedetail);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -1679,11 +1680,7 @@ function FreelanceDetailedView() {
               {}{" "}
             </p>
           </div>
-          <h1 className="car-detailed-view-car-title">{automobiles.title}</h1>
-          <div className="car-detailed-view-location-and-price-container">
-            <p className="car-detailed-view-location-name">{}</p>
-            <p className="car-detailed-view-car-price">£{automobiles.price}</p>
-          </div>
+
           {/*<div className="car-detailed-view-carousel-main-container">
                     <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} interval={3000} style={{color:"#196AE5"}}>
                     {carsImages.map((slide,index) => (
@@ -1694,14 +1691,42 @@ function FreelanceDetailedView() {
                     </Carousel>
                     </div>*/}
           <div className="car-detailed-view-carousel-main-container">
-            
-                <div className="sai1">
-                  <img
-                    src={`http://localhost:3009/${automobiles.images}`}
-                    alt={`Slide 1`}
-                    className="car-detailed-view-carousel-image"
-                  />
-                </div>
+            <div className="sai1">
+              <img
+                src={`http://localhost:3009/${automobiles.images}`}
+                alt={`Slide 1`}
+                className="car-detailed-view-carousel-image"
+              />
+            </div>
+          </div>
+          <h1 className="car-detailed-view-car-title">{automobiles.name}</h1>
+          <div className="freelance-detailed-view-details-container">
+            <div className="freelance-detail-view-location-container">
+              <span>
+                <CiLocationOn className="freelance-detail-view-location-icon" />
+              </span>
+              <p className="freelance-detailed-view-description">
+                {automobiles.location}
+              </p>
+            </div>
+            <div className="freelance-detail-view-location-container">
+              <span className="freelance-detail-view-salary-heading">
+                Email:
+              </span>
+              <p>{automobiles.email}</p>
+            </div>
+            <div className="freelance-detail-view-location-container">
+              <span className="freelance-detail-view-salary-heading">
+                Experience:
+              </span>
+              <p>{automobiles.experience} Years</p>
+            </div>
+            <div className="freelance-detail-view-location-container">
+              <span className="freelance-detail-view-salary-heading">
+                Role:
+              </span>
+              <p>{automobiles.role}</p>
+            </div>
           </div>
           <div>
             <h1 className="car-detailed-view-description-heading">

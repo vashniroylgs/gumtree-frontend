@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 
 const Freelancing = () => {
   const [electronics, setelectronics] = useState([]);
-
+  console.log(electronics);
   useEffect(() => {
     fetch("http://localhost:3009/getfreelance")
       .then((response) => response.json())
       .then((data) => {
         console.log(data.jobs);
-        setelectronics(data.jobs );
-        
+        setelectronics(data.jobs);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -318,9 +317,8 @@ const Freelancing = () => {
       </select>
     </div>
   );
-  
+
   return (
-    
     <div className="TotalFilterationContainer">
       <div className="filterationContainer   p-2">
         {LocationDetails()}
@@ -364,20 +362,30 @@ const Freelancing = () => {
                     </button>
                     <BiHeart className="gumtree-freelance-heart-color" />
                   </div>
-                  <h1 className="gumtree-freelance-heading">Carpenter</h1>
-                  <p className="gumtree-freelance-paragraph">
-                    Tunbridge Wells, Kent
-                  </p>
-                  <p className="gumtree-freelance-paragraph">Freelance</p>
+                  <h1 className="gumtree-freelance-heading">{each.name}</h1>
+                  <p className="gumtree-freelance-paragraph">{each.location}</p>
+                  <p className="gumtree-freelance-paragraph">{each.role}</p>
                   <div className="gumtree-freelance-top-line">
                     <p className="gumtree-freelance-euros">10€ per hour.</p>
-                    <p className="gumtree-freelance-paragraph">6 days ago</p>
+                    <p className="gumtree-freelance-paragraph">1 day ago</p>
                   </div>
                 </div>
               </Link>
             ))}
           </ul>
         </div>
+      </div>
+      <div className="proprtypage-main-container2">
+        <img
+          className="propertypage-add2-image"
+          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
+          alt=""
+        />
+        <img
+          className="propertypage-add2-image"
+          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
+          alt=""
+        />
       </div>
     </div>
   );

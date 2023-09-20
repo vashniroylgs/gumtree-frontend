@@ -1,0 +1,26 @@
+.freelance-detailed-view-details-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .freelance-detail-view-location-container {
+    display: flex;
+  }
+  
+.car-detailed-view-carousel-image{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: fill;
+}
+
+  .freelance-detail-view-location-icon {
+    font-size: 20px;
+  }
+  
+  .freelance-detail-view-salary-heading {
+    font-weight: bold;
+  }
+  

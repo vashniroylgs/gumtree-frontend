@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { useParams } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CiLocationOn } from "react-icons/ci";
 
 import {
   BsFillTelephoneFill,
@@ -1651,6 +1652,7 @@ function JobDetailedView() {
         console.error("Error fetching data:", error);
       });
   }, []);
+  console.log(automobiles);
 
   return (
     <div className="car-detailed-view-main-container">
@@ -1678,11 +1680,20 @@ function JobDetailedView() {
               {Company}{" "}
             </p>
           </div>
-          <h1 className="car-detailed-view-car-title">{automobiles.title}</h1>
+          <div className="car-detailed-view-carousel-main-container">
+            <div className="sai1">
+              <img
+                src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1690553185/Favicon_lgs_uvfyzx.png"
+                alt="Slide 1"
+                className="job-detailed-view-carousel-image"
+              />
+            </div>
+          </div>
+          {/* <h1 className="car-detailed-view-car-title">{automobiles.title}</h1>
           <div className="car-detailed-view-location-and-price-container">
             <p className="car-detailed-view-location-name">{}</p>
             <p className="car-detailed-view-car-price">£{automobiles.price}</p>
-          </div>
+          </div> */}
           {/*<div className="car-detailed-view-carousel-main-container">
                     <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} interval={3000} style={{color:"#196AE5"}}>
                     {carsImages.map((slide,index) => (
@@ -1707,7 +1718,38 @@ function JobDetailedView() {
           </div> */}
           <div>
             <h1 className="car-detailed-view-description-heading">
-              Description
+              {automobiles.jobtitle}
+            </h1>
+            <div className="job-detailed-view-details-container">
+              <div className="job-detail-view-location-container">
+                <span>
+                  <CiLocationOn className="job-detail-view-location-icon" />
+                </span>
+                <p className="car-detailed-view-description">
+                  {automobiles.joblocation}
+                </p>
+              </div>
+              <div className="job-detail-view-location-container">
+                <span className="job-detail-view-salary-heading">Salary:</span>
+                <p>{automobiles.salary}</p>
+              </div>
+              <div className="job-detail-view-location-container">
+                <span className="job-detail-view-salary-heading">
+                  Experience:
+                </span>
+                <p>{automobiles.experience} Years</p>
+              </div>
+              <div className="job-detail-view-location-container">
+                <span className="job-detail-view-salary-heading">
+                  Work Mode:
+                </span>
+                <p>{automobiles.workmode}</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 className="car-detailed-view-description-heading">
+              Description/Responsibilities:
             </h1>
             <p className="car-detailed-view-description">
               {automobiles.description}
