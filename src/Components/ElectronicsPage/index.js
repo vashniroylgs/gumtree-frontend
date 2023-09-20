@@ -204,7 +204,6 @@ function Electronics() {
               <AiOutlineLeft /> For Sale
             </p>
             <p>Appliances</p>
-
             {categoryList.map((eachCatagorey) => (
               <div key={eachCatagorey.id} className="electronics-category-list">
                 <p className="electronics-category-item-name">
@@ -242,17 +241,19 @@ function Electronics() {
                 style={{ textDecoration: "none" }}
               >
                 <div className="electronics-right-section-card">
-                  <img
-                    src={`http://localhost:3009/${eachProduct.image_names[0]}`}
-                    className="electronics-card-image"
-                  />
+                  <div className="electronics-card-image-container">
+                    <img
+                      src={`http://localhost:3009/${eachProduct.image_names[0]}`}
+                      className="electronics-card-image"
+                    />
+                  </div>
                   <div className="electronics-card-text-container">
                     <div className="electronics-card-first-container">
                       <h1 className="electronics-right-section-card-heading">
                         {eachProduct.title}
                       </h1>
                       <p className="electronics-right-section-card-para">
-                        {eachProduct.description}
+                        {eachProduct.device} {eachProduct.devicetype}
                       </p>
                       <p className="electronics-card-price">
                         <BsCurrencyPound />
@@ -261,7 +262,7 @@ function Electronics() {
                     </div>
                     <div className="electronics-card-second-container">
                       <BsHeart className="electronics-card-heart" />
-                      <p>xxxx</p>
+                      <p>Hyderbad</p>
                     </div>
                   </div>
                 </div>
@@ -269,6 +270,18 @@ function Electronics() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="proprtypage-main-container2">
+        <img
+          className="propertypage-add2-image"
+          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
+          alt=""
+        />
+        <img
+          className="propertypage-add2-image"
+          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
+          alt=""
+        />
       </div>
     </div>
   );

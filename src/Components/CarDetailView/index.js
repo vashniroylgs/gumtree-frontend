@@ -1697,7 +1697,7 @@ function CarDetailedView() {
           <div className="car-detailed-view-carousel-main-container">
             <Slider {...settings} className="car-detailed-view-carousel-slide">
               {carouselimages.map((imageName, index) => (
-                <div key={index}>
+                <div key={index} className="car-detailed-view-carousel-slide-img-container">
                   <img
                     src={`http://localhost:3009/${imageName}`}
                     alt={`Slide ${index}`}

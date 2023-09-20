@@ -1,15 +1,20 @@
-
+import "./index.css";
 import React, { useEffect, useState } from "react";
-import {
-  AiOutlineBell,
-  AiOutlineCaretLeft,
-  AiOutlineCaretDown,
-  AiOutlineHeart,
-} from "react-icons/ai";
-import { CiLocationOn } from "react-icons/ci";
-import { GrCheckmark } from "react-icons/gr";
+import Slider from "react-slick";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { CiLocationOn } from "react-icons/ci";
+
+import {
+  BsFillTelephoneFill,
+  BsFillHeartFill,
+  BsFillCaretDownFill,
+} from "react-icons/bs";
+import { MdDescription, MdReportProblem } from "react-icons/md";
+
+//icons
+import { RiArrowDropLeftLine } from "react-icons/ri";
 
 const carsDetails = [
   {
@@ -1267,7 +1272,114 @@ const carsDetails = [
 
     Year: "2018",
   },
+  {
+    id: 64,
+    images: [
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/a4f00f6b-7173-4b5b-0771-aca7f5362200/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/36c4910b-e708-4d0d-790d-964873428700/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/6dd5e8bb-bec1-4d7d-ef95-576b866c7700/86",
+    ],
 
+    title: "Volkswagen Polo 2011 Silver 1.2 Match Euro 5 3dr",
+    Company: "volkswagen",
+    FuelType: "Petrol",
+    Transmission: "Manual",
+    BodyType: "Hatchback",
+    Description:
+      "Clifton Car Sales are proud to continue their 30 years of providing a terrific choice of carefully sourced vehicles, in addition to a level of service and care seldom experienced anywhere - we want to help and make your car buying experience one to remember. Please call us on 01670 514488 or use the email link for any questions you may have and were also pleased to inform you that we don't add an unnecessary buying/administration fee - our good old fashioned, quality service is free of charge.",
+    image:
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/a4f00f6b-7173-4b5b-0771-aca7f5362200/86",
+
+    carPrice: "£8,000.00",
+    carLocation: "Crowland, Cambridgeshire",
+    Year: "2019",
+  },
+  {
+    id: 65,
+    images: [
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/6ea76ac6-76a5-4ec6-efb9-c510d0256f00/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/7356757a-38ed-408f-3942-f9a592f25900/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/c565b097-7b91-4582-17d3-64bbafbc7500/86",
+    ],
+    title: "2004 Volkswagen Polo 1.4 Twist 5dr Auto HATCHBACK Petrol Automatic",
+    Company: "volkswagen",
+    FuelType: "Petrol",
+    Transmission: "Manual",
+    BodyType: "Hatchback",
+    Description:
+      "Clifton Car Sales are proud to continue their 30 years of providing a terrific choice of carefully sourced vehicles, in addition to a level of service and care seldom experienced anywhere - we want to help and make your car buying experience one to remember. Please call us on 01670 514488 or use the email link for any questions you may have and were also pleased to inform you that we don't add an unnecessary buying/administration fee - our good old fashioned, quality service is free of charge.",
+    image:
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/6ea76ac6-76a5-4ec6-efb9-c510d0256f00/86",
+    carPrice: "£6,345.00",
+    carLocation: "Dunfermline, Fife",
+    Year: "2014",
+  },
+  {
+    id: 66,
+    images: [
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/9d32ed0b-30a1-43ff-3c1e-6e322fb3ff00/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/ca67109b-7778-4732-b5df-af18362d6600/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/998e8938-41fc-432a-bc20-a6f23079d100/86",
+    ],
+    title:
+      "VW POLO 1.2 60 MODA 5dr Petrol ULEZ Exempt S/H Long MOT Small Petrol Hot Hatch ",
+    Company: "volkswagen",
+    FuelType: "Petrol",
+    Transmission: "Manual",
+    BodyType: "Hatchback",
+    Description:
+      "FANTASTIC LOOKING AND DRIVING CAR WHICH COMES WITH A MASSIVE SPEC INCLUDING; SAT NAV, REVERSE CAMERA, FRONT AND REAR PARKING SENSORS, BLUETOOTH, MEDIA AND A FULL 8 STAMP SERVICE RECORD..16in Alloy Wheels, Door Mirrors - Electric-Retractable, Electric Windows - Front and Rear, Electric Windows - Remote Key Fob, Keyless Tailgate Unlock Function, Tailgate Windows Tinted, Tyre Repair Kit, 2x USB Jack and HDMI Jack, Accessory Socket - Front, Accessory Socket - Instrument Panel, Accessory Socket - Luggage Compartment, Aha - App Integration, Bluetooth Hands Free Telephone - HFT, CD-Radio, CONNECT, Cruise Control and care seldom experienced anywhere - we want to help and make your car buying experience one to remember. Please call us on 01670 514488 or use the email link for any questions you may have and were also pleased to inform you that we don't add an unnecessary buying/administration fee - our good old fashioned, quality service is free of charge.",
+    image:
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/9d32ed0b-30a1-43ff-3c1e-6e322fb3ff00/86",
+
+    carPrice: "£8,995.00",
+    carLocation: "Dunfermline, Fife",
+    Year: "2017",
+  },
+
+  {
+    id: 67,
+    images: [
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/16ed01d7-3c0e-4b66-17a2-82e193f56b00/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/52a4a1ec-a2c3-47ae-2cd9-773976beb600/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/1bd1ec3b-989d-4454-5c7a-2d210c602600/86",
+    ],
+
+    title:
+      "2011 Volkswagen Polo MATCH 5-Door NATIONWIDE DELIVERY AVAILABLE Petrol ",
+    Company: "volkswagen",
+    FuelType: "Petrol",
+    Transmission: "Manual",
+    BodyType: "Hatchback",
+    Description:
+      "FANTASTIC LOOKING AND DRIVING CAR WHICH COMES WITH A MASSIVE SPEC INCLUDING; SAT NAV, REVERSE CAMERA, FRONT AND REAR PARKING SENSORS, BLUETOOTH, MEDIA AND A FULL 8 STAMP SERVICE RECORD..16in Alloy Wheels, Door Mirrors - Electric-Retractable, Electric Windows - Front and Rear, Electric Windows - Remote Key Fob, Keyless Tailgate Unlock Function, Tailgate Windows Tinted, Tyre Repair Kit, 2x USB Jack and HDMI Jack, Accessory Socket - Front, Accessory Socket - Instrument Panel, Accessory Socket - Luggage Compartment, Aha - App Integration, Bluetooth Hands Free Telephone - HFT, CD-Radio, CONNECT, Cruise Control and care seldom experienced anywhere - we want to help and make your car buying experience one to remember. Please call us on 01670 514488 or use the email link for any questions you may have and were also pleased to inform you that we don't add an unnecessary buying/administration fee - our good old fashioned, quality service is free of charge.",
+    image:
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/16ed01d7-3c0e-4b66-17a2-82e193f56b00/86",
+    carPrice: "£10,995.00",
+    carLocation: "Dunfermline, Fife",
+    Year: "2011",
+  },
+  {
+    id: 68,
+    images: [
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/34e7ccee-c056-45e4-7741-0dc6151ea800/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/7696a142-3c38-40d5-a814-4ab0c941fe00/86",
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/8832ad2b-71b1-45c1-7bf0-8b25813d8500/86",
+    ],
+
+    title: "2020 Volkswagen Polo 1.0 TSI 95 Beats 5dr Hatchback Petrol Manual ",
+    Company: "volkswagen",
+    FuelType: "Petrol",
+    Transmission: "Manual",
+    BodyType: "Hatchback",
+    Description:
+      "Welcome to City Motors Cambs Ltd, your premier destination for the perfect vehicle buying experience. We are thrilled to present this brilliant vehicle that is available now for test drive and same day collection or even home delivery.At City Motors Cambs Ltd, we offer the best market price for your current vehicle, which you can use towards your deposit. In fact, even if you don't buy our vehicles, we will still buy yours.",
+    image:
+      "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/34e7ccee-c056-45e4-7741-0dc6151ea800/86",
+    carPrice: "£9,990.00",
+    carLocation: "Dunfermline, Fife",
+    Year: "2020",
+  },
   {
     id: 53,
     images: [
@@ -1503,232 +1615,215 @@ const carsDetails = [
   },
 ];
 
-// const carsDetails = [
-//   {
-//     Image:
-//       "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/00/s/NjgxWDEwMjQ=/z/oYoAAOSwx1dhMHX2/86",
-//     Title:
-//       "Luxury Penthouse Warehouse Apartment Lifestyle Location Photo Video Film Studio Space Hire London",
-//     Features: ["Agency", "Date available: 09 Aug 2023", "Other"],
-//     Subtitle: "Tower Hamlets, London",
-//     Cost: "£1pw",
-//     Time: "48 days ago",
-//     company: "toyota",
-//   },
-//   {
-//     Image:
-//       "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/00/s/Njg0WDEwMjQ=/z/sJsAAOSwa4lhyxwx/86",
-//     Title: "Great Artist Studio to let",
-//     Features: ["Private", "Date available: 01 Oct 2023", "Other"],
-//     Subtitle: "Notting Hill, London",
-//     Cost: "£400pm",
-//     Time: "4 days ago",
-//     company: "volkswagen",
-//   },
-//   {
-//     Image:
-//       "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/00/s/NjgxWDEwMjQ=/z/oYoAAOSwx1dhMHX2/86",
-//     Title:
-//       "Luxury Penthouse Warehouse Apartment Lifestyle Location Photo Video Film Studio Space Hire London",
-//     Features: ["Agency", "Date available: 09 Aug 2023", "Other"],
-//     Subtitle: "Tower Hamlets, London",
-//     Cost: "£1pw",
-//     Time: "48 days ago",
-//     company: "toyota",
-//   },
-//   {
-//     Image:
-//       "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/00/s/Njg0WDEwMjQ=/z/sJsAAOSwa4lhyxwx/86",
-//     Title: "Great Artist Studio to let",
-//     Features: ["Private", "Date available: 01 Oct 2023", "Other"],
-//     Subtitle: "Notting Hill, London",
-//     Cost: "£400pm",
-//     Time: "4 days ago",
-//     company: "volkswagen",
-//   },
-// ];
+const carsImages = [
+  "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/e14f3b43-2305-4466-4c66-6921bd752900/86",
+  "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/d0226147-0487-476b-9f6c-b255da224000/86",
+  "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/19cf29b6-585d-4c9e-e6de-91cdf7d8f000/86",
+  "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/9784d19c-2c1d-44df-747f-34346acb1100/86",
+  "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/c0170493-cc5f-4aa1-6de1-96221daaa000/86",
+];
 
-function CarPage() {
-  const { carDetail } = useParams();
-  const [automobiles, setAutomobiles] = useState([]);
-  console.log(automobiles)
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 2000,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  pauseOnHover: false,
+};
+
+function JobDetailedView() {
+  const { id } = useParams();
+  console.log(id);
+  const [automobiles, setAutomobile] = useState([]);
+  const singleCar = carsDetails.filter((car) => car.id == id);
+  const { title, Company, Description, images, carLocation } = singleCar[0];
   useEffect(() => {
-    // Fetch data from your server when the component mounts
-    fetch(`http://localhost:3009/getautomobiles/${carDetail}`)
+    fetch(`http://localhost:3009/jobs/jobDetail/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setAutomobiles(data.automobiles);
+        setAutomobile(data.Jobdetail);
+        console.log(data.Jobdetail);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
-  // const filteredCars = carsDetails.filter((car) => car.Company === carDetail);
+  console.log(automobiles);
+
   return (
-    <div className="propertypage-main-container">
-      <div className="propertypage-main-container1">
-        <img
-          className="propertpage-add1-image"
-          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694502873/Screenshot_919_kcepzv.png"
-          alt=""
-        />
-        <div className="propertypage-main-datacontainer">
-          <h3 className="propertypage-home-heading">Home / Automoblie</h3>
-          <h3 className="propertypage-home-heading1">28,646 ads Property</h3>
-          <div className="propertpage-home-buttons-container">
-            <div className="propertypage-alert-container">
-              <AiOutlineBell className="propertypage-alert-icon" />
-              <p className="propertypage-alert-text">Save Search Alert</p>
-            </div>
-            <select className="propertypage-alert-select-container">
-              <option>Most Recent Visits</option>
-              <option>Nearest First</option>
-            </select>
+    <div className="car-detailed-view-main-container">
+      <div className="car-detailed-view-sub-container">
+        <div className="car-detailed-view-left-main-container">
+          <div className="car-detailed-view-navigation-container">
+            <RiArrowDropLeftLine className="car-detailed-view-navigation-icon" />
+            <p className="car-detailed-view-navigation-text">
+              Back{" "}
+              <span className="car-detailed-view-navigation-span-element">
+                |
+              </span>{" "}
+              Home{" "}
+              <span className="car-detailed-view-navigation-span-element">
+                /
+              </span>{" "}
+              Motors{" "}
+              <span className="car-detailed-view-navigation-span-element">
+                /
+              </span>{" "}
+              Cars{" "}
+              <span className="car-detailed-view-navigation-span-element">
+                /
+              </span>{" "}
+              {Company}{" "}
+            </p>
           </div>
-          <div className="propertypage-data-container">
-            <div className="propertypage-filter-main-container">
-              <p className="propertypage-location-text">location</p>
-              <div className="ppr-popup-input1-container">
-                <CiLocationOn className="ppr-popup-input1-icon" />
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="INDIA"
-                  className="ppr-popup-input1"
-                  required
-                />
-              </div>
-              <div className="property-page-select-container">
-                <select className="propertypage-filter-select-option">
-                  <option selected>Choose Distance </option>
-                  <option>+1 mile</option>
-                  <option>+2 mile</option>
-                  <option>+3 mile</option>
-                </select>
-                <button className="property-page-select-update-button">
-                  Update
-                </button>
-              </div>
-              <hr style={{ margin: "15px" }} />
-              <p className="propertypage-filter-category-text">Category</p>
-              <div className="propertypage-all-category-container">
-                <AiOutlineCaretLeft className="propertypage-all-category-icon" />
-                <p className="propertypage-all-category-text">All Categories</p>
-              </div>
-              <div className="propertypage-filter-option-container">
-                <p className="propertypage-filter-option-text2">Property</p>
-                <GrCheckmark className="propertypage-filter-option-icon" />
-              </div>
-              <div
-                style={{ marginLeft: "15%" }}
-                className="propertypage-filter-option-container"
-              >
-                <p className="propertypage-filter-option-text">Commercial</p>
-                <p className="propertypage-filter-option-text1">8874</p>
-              </div>
-              <div
-                style={{ marginLeft: "15%" }}
-                className="propertypage-filter-option-container"
-              >
-                <p className="propertypage-filter-option-text">To Rent</p>
-                <p className="propertypage-filter-option-text1">6542</p>
-              </div>
-              <div
-                style={{ marginLeft: "15%" }}
-                className="propertypage-filter-option-container"
-              >
-                <p className="propertypage-filter-option-text">To Share</p>
-                <p className="propertypage-filter-option-text1">6782</p>
-              </div>
-              <div
-                style={{ marginLeft: "15%" }}
-                className="propertypage-filter-option-container"
-              >
-                <p className="propertypage-filter-option-text">
-                  Parking & Garage
+          <div className="car-detailed-view-carousel-main-container">
+            <div className="sai1">
+              <img
+                src="https://res.cloudinary.com/dg81jw9qd/image/upload/v1690553185/Favicon_lgs_uvfyzx.png"
+                alt="Slide 1"
+                className="job-detailed-view-carousel-image"
+              />
+            </div>
+          </div>
+          {/* <h1 className="car-detailed-view-car-title">{automobiles.title}</h1>
+          <div className="car-detailed-view-location-and-price-container">
+            <p className="car-detailed-view-location-name">{}</p>
+            <p className="car-detailed-view-car-price">£{automobiles.price}</p>
+          </div> */}
+          {/*<div className="car-detailed-view-carousel-main-container">
+                    <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} interval={3000} style={{color:"#196AE5"}}>
+                    {carsImages.map((slide,index) => (
+                        <div key={index} className="car-detailed-view-carousel-slide">
+                            <img src={slide} alt={`Slide ${index}`}  className="car-detailed-view-carousel-image"/>
+                        </div>
+                    ))}
+                    </Carousel>
+                    </div>*/}
+          {/* <div className="car-detailed-view-carousel-main-container">
+            <Slider {...settings} className="car-detailed-view-carousel-slide">
+              {carouselimages.map((imageName, index) => (
+                <div className="sai1" key={index}>
+                  <img
+                    src={`http://localhost:3009/${imageName}`}
+                    alt={`Slide ${index}`}
+                    className="car-detailed-view-carousel-image"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div> */}
+          <div>
+            <h1 className="car-detailed-view-description-heading">
+              {automobiles.jobtitle}
+            </h1>
+            <div className="job-detailed-view-details-container">
+              <div className="job-detail-view-location-container">
+                <span>
+                  <CiLocationOn className="job-detail-view-location-icon" />
+                </span>
+                <p className="car-detailed-view-description">
+                  {automobiles.joblocation}
                 </p>
-                <p className="propertypage-filter-option-text1">4523</p>
               </div>
-              <div
-                style={{ marginLeft: "15%" }}
-                className="propertypage-filter-option-container"
-              >
-                <p className="propertypage-filter-option-text">For Sale</p>
-                <p className="propertypage-filter-option-text1">7423</p>
+              <div className="job-detail-view-location-container">
+                <span className="job-detail-view-salary-heading">Salary:</span>
+                <p>{automobiles.salary}</p>
               </div>
-              <div className="propertypage-show-more-container">
-                <p className="propertypage-show-more-text">Show 4 More</p>
-                <AiOutlineCaretDown style={{ marginLeft: "10px" }} />
+              <div className="job-detail-view-location-container">
+                <span className="job-detail-view-salary-heading">
+                  Experience:
+                </span>
+                <p>{automobiles.experience} Years</p>
+              </div>
+              <div className="job-detail-view-location-container">
+                <span className="job-detail-view-salary-heading">
+                  Work Mode:
+                </span>
+                <p>{automobiles.workmode}</p>
               </div>
             </div>
-            <div className="porperty-card-main-conatiner">
-              {automobiles.map((property, index) => (
-                <Link
-                  to={`/automobiles/carDetails/${property.id}`}
-                  style={{ textDecoration: "none" }}
-                >
-                  <div className="porperty-card-conatiner" key={index}>
-                    <div className="porperty-card-image-conatiner">
-                      <img
-                        src={`http://localhost:3009/${property.image_names[0]}`}
-                        alt=""
-                        className="porperty-card-image-conatiner-image"
-                      />
-                    </div>
-                    <div className="porperty-card-content-conatiner">
-                      <div className="porperty-card-content-conatiner-heading-content">
-                        <h1 className="porperty-card-content-conatiner-heading">
-                          {property.title}
-                        </h1>
-                        <AiOutlineHeart
-                          style={{ color: "red", fontSize: "22px" }}
-                        />
-                      </div>
-                      <div className="porperty-card-content-conatiner-list-elements">
-                        <span className="porperty-card-content-conatiner-list-element">
-                        {property.selectedCar}
-                        </span>
-                        <span className="porperty-card-content-conatiner-list-element">
-                        {property.features}
-                        </span>
-                          {/* <span className="porperty-card-content-conatiner-list-element">
-                          XXXXXX
-                          </span> */}
-                      </div>
-                      <p className="porperty-card-content-conatiner-location">
-                        XXXXXX
-                      </p>
-                      <div className="porperty-card-content-conatiner-cost">
-                        <p className="porperty-card-content-conatiner-cost-item">
-                          {property.price}
-                        </p>
-                        <p className="porperty-card-content-conatiner-time-item">
-                        {property.selectedCar}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-               
+          </div>
+          <div>
+            <h1 className="car-detailed-view-description-heading">
+              Description/Responsibilities:
+            </h1>
+            <p className="car-detailed-view-description">
+              {automobiles.description}
+            </p>
+          </div>
+        </div>
+        <div className="car-detailed-view-right-main-container">
+          <div className="car-detailed-view-right-detailed-card">
+            <div className="car-detailed-view-right-detailed-card-first">
+              <h3>Cambria Group</h3>
+              <div className="car-detailed-view-right-first-text-container">
+                <p>Posting for 9+ years</p>
+                <p className="car-detailed-view-right-link">See all ads</p>
+              </div>
+            </div>
+            <hr />
+            <h4 className="car-detailed-view-right-second-heading">
+              Cantact Cambria Group
+            </h4>
+            <div className="car-detailed-view-right-cantact-container">
+              <BsFillTelephoneFill />
+              <p className="car-detailed-view-right-cantact">
+                Login to reveal phone number
+              </p>
+            </div>
+            <textarea
+              className="car-detailed-view-right-text-area"
+              placeholder="Hi Cambria Group, I'm interested in your item. Is this still
+            available? Thanks"
+            ></textarea>
+            <input
+              type="number"
+              placeholder="Your phone number"
+              className="car-detailed-view-right-input"
+            />
+            <p className="car-detailed-view-right-cantact-paragraph">
+              Your contact details will be included in your reply. Gumtree
+              reserves the right to monitor conversations sent through our
+              servers to protect you from fraud, spam or suspicious behaviour.
+            </p>
+            <button className="car-detailed-view-right-send-button">
+              Send Message
+            </button>
+            <hr />
+            <h4 className="car-detailed-view-right-cantact-link">
+              www.grange.co.uk/dealerships/mclaren-hatfield/?utm_source=ebaymotorsgroup&utm_medium=classifieds&utm_campaign=emg
+            </h4>
+            <hr />
+            <div className="car-detailed-view-right-button-container">
+              <button className="car-detailed-view-right-favourite-button">
+                <BsFillHeartFill />
+                Favourite
+              </button>
+              <button className="car-detailed-view-right-favourite-button">
+                <MdReportProblem />
+                Report
+                <BsFillCaretDownFill />
+              </button>
+            </div>
+          </div>
+          <div className="car-detailed-view-right-vehicle-history">
+            <h3 className="car-detailed-view-right-vehicle-history-heading">
+              Product history
+            </h3>
+            <div className="car-detailed-view-right-vehicle-history-para-container">
+              <p className="car-detailed-view-right-vehicle-history-paragraph">
+                We are unable to perform a basic history check on this vehicle.
+                Please contact the seller for more information.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="proprtypage-main-container2">
-        <img
-          className="propertypage-add2-image"
-          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
-          alt=""
-        />
-        <img
-          className="propertypage-add2-image"
-          src="https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png"
-          alt=""
-        />
-      </div>
     </div>
   );
 }
-
-export default CarPage;
+export default JobDetailedView;

@@ -1,0 +1,23 @@
+.job-detailed-view-details-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.job-detail-view-location-container {
+  display: flex;
+}
+
+.job-detail-view-location-icon {
+  font-size: 20px;
+}
+
+.job-detail-view-salary-heading {
+  font-weight: bold;
+}
+
+.job-detailed-view-carousel-image{
+    width: 300px;
+    height: 250px;
+}

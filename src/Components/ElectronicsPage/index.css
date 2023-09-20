@@ -22,6 +22,8 @@
 .electronics-top-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
   gap: 8px;
 }
 
@@ -149,15 +151,24 @@
 .electronics-bottom-section {
   display: flex;
   gap: 10px;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.electronics-card-image-container{
+  width: 250px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-self: center;
 }
 
 .electronics-card-image {
-  min-height: 150px;
-  min-width: 150px;
-  max-height: 150px;
-  max-width: 150px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
 }
 .electronics-right-section {
   margin-top: 20px;
@@ -165,13 +176,15 @@
 }
 
 .electronics-right-section-card {
-  width: 100%;
-  margin: 10px;
   display: flex;
-  gap: 5px;
-  border-radius: 8px;
+  height: 180px;
+  border-radius: 20px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  gap: 5px;
+  margin: 10px;
 }
+
 
 .electronics-right-section-card-heading {
   font-size: 20px;

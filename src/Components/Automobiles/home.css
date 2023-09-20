@@ -89,6 +89,13 @@ label {
   margin-top: 15px;
 }
 
+.car-card-images {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
 .popular {
   color: black;
 

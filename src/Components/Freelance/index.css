@@ -75,7 +75,7 @@ hr {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 10px;
   border-radius: 20px;
-  height: 230px;
+  height: 200px;
 }
 .gumtree-freelance-top-line {
   display: flex;
@@ -113,6 +113,7 @@ hr {
   color: #635b67;
   font-family: "Roboto";
   font-size: 15px;
+  margin: 0;
 }
 .gumtree-freelance-euros {
   color: #52a744;

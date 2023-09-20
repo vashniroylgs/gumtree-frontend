@@ -149,7 +149,7 @@ function AutoMobiles() {
               style={{ textDecoration: "none" }}
             >
               <div className="car-images">
-                <img src={car.imageUrl} alt="" />
+                <img src={car.imageUrl} className="car-card-images" alt="" />
                 <h2>{car.name}</h2>
               </div>
             </Link>
