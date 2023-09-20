@@ -17,13 +17,13 @@ ad-container {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  float: right;
+  float: top;
   margin-right: 5px;
-  margin-top: -176%;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .ad-container1 {
-  width: 25%;
+  width: 20%;
   height: 633px; /* Set a fixed height */
   background-image: url('https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png');
   background-size: cover;
@@ -33,11 +33,11 @@ ad-container {
   border-radius: 10px;
   float: right;
   margin-right: 5px;
-  margin-top: -131%;
+  margin-top: -157%;
   margin-bottom: 20px;
 }
 .ad-container2 {
-  width: 25%;
+  width: 20%;
   height: 633px; /* Set a fixed height */
   background-image: url('https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png');
   background-size: cover;
@@ -47,11 +47,11 @@ ad-container {
   border-radius: 10px;
   float: right;
   margin-right: 5px;
-  margin-top: -87%;
+  margin-top: -100%;
   margin-bottom: 20px;
 }
 .ad-container3 {
-  width: 25%;
+  width: 20%;
   height: 630px; /* Set a fixed height */
   background-image: url('https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png');
   background-size: cover;
