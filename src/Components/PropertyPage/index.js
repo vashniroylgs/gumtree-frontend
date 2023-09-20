@@ -292,12 +292,14 @@ import {
   
   const Property = () => {
     const [properties, setproperties] = useState([]);
+    console.log(properties)
     useEffect(() => {
       // Fetch data from your server when the component mounts
       fetch(`http://localhost:3009/getproperties`)
         .then((response) => response.json())
         .then((data) => {
           setproperties(data.properties);
+
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -438,14 +440,14 @@ import {
                         ))}
                       </div> */}
                       <p className="porperty-card-content-conatiner-location">
-                        xxxx
+                        {property.direction} | {property.propertytype}
                       </p>
                       <div className="porperty-card-content-conatiner-cost">
                         <p className="porperty-card-content-conatiner-cost-item">
                           {property.price}
                         </p>
                         <p className="porperty-card-content-conatiner-time-item">
-                          xxxx
+                          few hours ago
                         </p>
                       </div>
                     </div>

@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./index.css";
 import { BiPound } from "react-icons/bi";
 import { BsFillInfoCircleFill } from "react-icons/bs";
-
+import { Navigate } from "react-router-dom";
 const itemDetails = [
   {
-    name: "Washnig Machine",
+    name: "Washing Machine",
     itemDetail: "washingmachine",
   },
   {
@@ -56,7 +56,7 @@ export class ElectronicsUploadForm extends Component {
     price: "",
     images: [],
     selectedMobileType: "",
-    selectedDevice: "",
+    selectedDevice: "Washing Machine",
   };
 
   takePrice = (event) => {
@@ -124,6 +124,8 @@ export class ElectronicsUploadForm extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data as needed
+        alert("Ad Posted successfully");
+        this.setState({ isSubmitted: true });
       })
       .catch((error) => {
         console.error(error);
@@ -131,140 +133,155 @@ export class ElectronicsUploadForm extends Component {
   };
 
   render() {
-    const { title, description, price, selectedDevice, selectedMobileType } =
-      this.state;
+    const {
+      title,
+      description,
+      price,
+      selectedDevice,
+      selectedMobileType,
+      isSubmitted,
+    } = this.state;
 
     console.log(selectedDevice, title, price, description, selectedMobileType);
     return (
-      <div className="upload-form-main-container">
-        <div className="upload-form-sub-container">
-          <h1 className="upload-form-sub-container-heading">Sell Your Item</h1>
-          <div className="upload-form-image-upload-main-container">
-            <h4 className="upload-form-vehicle-container-heading">Photos</h4>
-            <div className="upload-form-image-first-container">
-              <div className="upload-form-image-sub-container">
-                <div className="upload-form-image-container">
-                  <input
-                    className="upload-form-image-input"
-                    type="file"
-                    name="images"
-                    multiple
-                    onChange={this.handleImageChange}
-                  />
-                  <label
-                    htmlFor="fileupload"
-                    className="upload-form-image-label"
-                  >
-                    Add photos
-                  </label>
-                </div>
-                <p className="upload-form-image-para">Accepts .jpg and .png</p>
-              </div>
-              <div>
-                <p>Add up to 10 photos. More photos get more replies</p>
-              </div>
-            </div>
-          </div>
-          <div className="d-flex ">
-            <div>
-              <h2>Select a Device:</h2>
-              <select
-                value={this.state.selectedDevice}
-                onChange={this.handleDeviceChange}
-              >
-                {itemDetails.map((each) => (
-                  <option value={each.name}>{each.name}</option>
-                ))}
-              </select>
-              <p>You selected: {this.state.selectedDevice}</p>
-            </div>
-            {selectedDevice === "Mobile" && this.showPropertyLevels()}
-          </div>
+      <>
+        {isSubmitted && <Navigate to="/" />}
 
-          <div className="upload-form-title-container">
-            <h1 className="upload-form-vehicle-container-heading">Title*</h1>
-            <input
-              type="text"
-              className="upload-form-title-input"
-              onChange={this.takeTitle}
-              value={title}
-            />
-          </div>
-          <div className="upload-form-description-container">
-            <h3 className="upload-form-vehicle-container-heading">
-              Description *
-            </h3>
-            <textarea
-              className="upload-form-description-text-area"
-              onChange={this.takeDescription}
-              value={description}
-            ></textarea>
-          </div>
-          <div className="upload-form-price-container">
-            <h3 className="upload-form-vehicle-container-heading">Price *</h3>
-            <div className="upload-form-price-input-container">
-              <BiPound className="upload-form-price-icon" />
+        <div className="upload-form-main-container">
+          <div className="upload-form-sub-container">
+            <h1 className="upload-form-sub-container-heading">
+              Sell Your Item
+            </h1>
+            <div className="upload-form-image-upload-main-container">
+              <h4 className="upload-form-vehicle-container-heading">Photos</h4>
+              <div className="upload-form-image-first-container">
+                <div className="upload-form-image-sub-container">
+                  <div className="upload-form-image-container">
+                    <input
+                      className="upload-form-image-input"
+                      type="file"
+                      accept=".jpg, .jpeg, .png"
+                      name="images"
+                      multiple
+                      onChange={this.handleImageChange}
+                    />
+                    <label
+                      htmlFor="fileupload"
+                      className="upload-form-image-label"
+                    >
+                      Add photos
+                    </label>
+                  </div>
+                  <p className="upload-form-image-para">
+                    Accepts .jpg and .png
+                  </p>
+                </div>
+                <div>
+                  <p>Add up to 10 photos. More photos get more replies</p>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex ">
+              <div>
+                <h2>Select a Device:</h2>
+                <select
+                  value={this.state.selectedDevice}
+                  onChange={this.handleDeviceChange}
+                >
+                  {itemDetails.map((each) => (
+                    <option value={each.name}>{each.name}</option>
+                  ))}
+                </select>
+                <p>You selected: {this.state.selectedDevice}</p>
+              </div>
+              {selectedDevice === "Mobile" && this.showPropertyLevels()}
+            </div>
+
+            <div className="upload-form-title-container">
+              <h1 className="upload-form-vehicle-container-heading">Title*</h1>
               <input
                 type="text"
-                className="upload-form-price-input"
-                onChange={this.takePrice}
-                value={price}
+                className="upload-form-title-input"
+                onChange={this.takeTitle}
+                value={title}
               />
             </div>
-          </div>
-          <div>
-            <h1 className="upload-form-contact-details-heading">
-              Contact Details *
-            </h1>
-            <div className="upload-form-contact-details-container">
-              <p className="upload-form-contact-details-sub-heading">
-                Your Contact Name:{" "}
-                <span className="upload-form-contact-details-sub-heading-span">
-                  Vashni Roy
-                </span>
-              </p>
-              <p className="upload-form-contact-details-sub-heading">
-                Location:{" "}
-                <span className="upload-form-contact-details-sub-heading-span">
-                  Hyderbad
-                </span>
-              </p>
-              <p className="upload-form-contact-details-sub-heading">
-                Email:{" "}
-                <span className="upload-form-contact-details-sub-heading-span">
-                  vashniroy@gmail.com
-                </span>
-              </p>
-              <p className="upload-form-contact-details-sub-heading">
-                Phone:{" "}
-                <span className="upload-form-contact-details-sub-heading-span">
-                  1234567890
-                </span>
+            <div className="upload-form-description-container">
+              <h3 className="upload-form-vehicle-container-heading">
+                Description *
+              </h3>
+              <textarea
+                className="upload-form-description-text-area"
+                onChange={this.takeDescription}
+                value={description}
+              ></textarea>
+            </div>
+            <div className="upload-form-price-container">
+              <h3 className="upload-form-vehicle-container-heading">Price *</h3>
+              <div className="upload-form-price-input-container">
+                <BiPound className="upload-form-price-icon" />
+                <input
+                  type="text"
+                  className="upload-form-price-input"
+                  onChange={this.takePrice}
+                  value={price}
+                />
+              </div>
+            </div>
+            <div>
+              <h1 className="upload-form-contact-details-heading">
+                Contact Details *
+              </h1>
+              <div className="upload-form-contact-details-container">
+                <p className="upload-form-contact-details-sub-heading">
+                  Your Contact Name:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    Vashni Roy
+                  </span>
+                </p>
+                <p className="upload-form-contact-details-sub-heading">
+                  Location:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    Hyderbad
+                  </span>
+                </p>
+                <p className="upload-form-contact-details-sub-heading">
+                  Email:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    vashniroy@gmail.com
+                  </span>
+                </p>
+                <p className="upload-form-contact-details-sub-heading">
+                  Phone:{" "}
+                  <span className="upload-form-contact-details-sub-heading-span">
+                    1234567890
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="upload-form-email-related-caution-container">
+              <BsFillInfoCircleFill className="upload-form-email-related-caution-icon" />
+              <p className="upload-form-email-related-caution-description">
+                All emails replies are sent via Bquest message centre. To
+                determine and identify potential fraud, spam or suspicious
+                behaviour, we anonymise your email address, and reserve the
+                right to monitor conversations.
               </p>
             </div>
-          </div>
-          <div className="upload-form-email-related-caution-container">
-            <BsFillInfoCircleFill className="upload-form-email-related-caution-icon" />
-            <p className="upload-form-email-related-caution-description">
-              All emails replies are sent via Bquest message centre. To
-              determine and identify potential fraud, spam or suspicious
-              behaviour, we anonymise your email address, and reserve the right
-              to monitor conversations.
+            <button
+              className="upload-form-post-my-car-button"
+              onClick={this.postCarDetails}
+            >
+              Post my Ad
+            </button>
+            <p className="upload-form-terms-and-conditions-text">
+              By selecting Post My Ad you agree you've read and accepted our
+              Terms of Use and Posting Rules. Please see our Privacy Notice for
+              information regarding the processing of your data.
             </p>
           </div>
-          <button
-            className="upload-form-post-my-car-button"
-            onClick={this.postCarDetails}
-          >
-            Post my Ad
-          </button>
-          <p className="upload-form-terms-and-conditions-text">
-            By selecting Post My Ad you agree you've read and accepted our Terms
-            of Use and Posting Rules. Please see our Privacy Notice for
-            information regarding the processing of your data.
-          </p>
         </div>
-      </div>
+      </>
     );
   }
 }

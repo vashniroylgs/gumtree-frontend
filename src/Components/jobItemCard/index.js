@@ -234,7 +234,8 @@ class JobCard extends Component {
                   {each.joblocation}
                 </p>
                 <p className="Jobcard-middle-section-name">
-                  {each.workmode}Mode {each.salary} Lpa
+                 Mode : {each.workmode}
+                 
                 </p>
               </div>
               {/* <img
@@ -245,7 +246,7 @@ class JobCard extends Component {
             </div>
             <div className="Jobcard-bottom-section-container">
               <p className="Jobcard-bottom-section-salary">
-                {each.description}
+                {/* {each.description} */} {each.salary} Lpa
               </p>
               <p className="Jobcard-bottom-section-time">7 days ago</p>
             </div>

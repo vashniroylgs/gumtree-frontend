@@ -252,7 +252,7 @@ function Electronics() {
                         {eachProduct.title}
                       </h1>
                       <p className="electronics-right-section-card-para">
-                        {eachProduct.description}
+                        {eachProduct.device} {eachProduct.devicetype}
                       </p>
                       <p className="electronics-card-price">
                         <BsCurrencyPound />
@@ -261,7 +261,7 @@ function Electronics() {
                     </div>
                     <div className="electronics-card-second-container">
                       <BsHeart className="electronics-card-heart" />
-                      <p>xxxx</p>
+                      <p>Hyderbad</p>
                     </div>
                   </div>
                 </div>
