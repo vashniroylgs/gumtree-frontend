@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const itemDetails = [
   {
-    name: "Washnig Machine",
+    name: "Washing Machine",
     itemDetail: "washingmachine",
   },
   {
@@ -57,7 +57,7 @@ export class ElectronicsUploadForm extends Component {
     price: "",
     images: [],
     selectedMobileType: "",
-    selectedDevice: "",
+    selectedDevice: "Washing Machine",
   };
 
   takePrice = (event) => {
