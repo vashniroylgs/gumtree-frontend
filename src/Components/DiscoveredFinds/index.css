@@ -5,27 +5,25 @@
 }
 .discover-gumtree-freelance-heart-color {
   color: red;
-  height: 35px;
-  width: 80px;
+  font-size:24px;
   z-index: 999;
   position: relative;
-  
+  cursor:pointer;
 }
 
 .discover-home-card-details-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: white;
-  margin-left: 5%;
-  padding: 5%;
+  padding: 4%;
 }
 
 .discover-card-container {
   box-shadow: 0 0 3px #b7b4b7;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  width: 24%;
+  width: 23.5%;
 }
 
 .discover-card-image {
@@ -54,6 +52,7 @@
   width: max-content;
   height: max-content;
   color: black;
+  gap:3px;
 }
 
 .discover-card-location-icon {

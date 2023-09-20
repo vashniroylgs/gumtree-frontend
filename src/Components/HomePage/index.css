@@ -1,13 +1,14 @@
-.home-main-container {
+.home-main-contianer {
   background-color: #f1f1f1;
   width: 100%;
+  padding:1.5% 2%;
 }
 
 .home-mini-all-categories-contianer {
   width: 70%;
   margin-left: 5%;
 }
-.ad-container {
+ad-container {
   width: 25%;
   height: 633px; /* Set a fixed height */
   background-image: url('https://res.cloudinary.com/dx0tk0a56/image/upload/v1694503153/Screenshot_920_lheb8k.png');
