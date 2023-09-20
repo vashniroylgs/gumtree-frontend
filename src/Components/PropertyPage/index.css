@@ -184,14 +184,9 @@
 }
 
 .porperty-card-image-conatiner-image {
- 
-
- max-width: 100%; /* Ensure the image doesn't exceed the container's width */
-
-  max-height: 100%; /* Ensure the image doesn't exceed the container's height */
-
-  display: block; /* Remove extra spacing below the image */
-
+  max-width: 100%; 
+  max-height: 100%; 
+  display: block;
   margin: auto;
 }
 .porperty-card-content-conatiner {

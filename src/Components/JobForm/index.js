@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
 import "./index.css";
+import { Navigate } from "react-router-dom";
 
 import { Component } from "react";
 
@@ -12,6 +12,7 @@ class JobForm extends Component {
     jobid: "",
     experience: "",
     description: "",
+    isSubmitted: false
   };
 
   handleInputChange = (event) => {
@@ -45,8 +46,7 @@ class JobForm extends Component {
         console.log(data);
         this.setState({ success_message: data.success_msg });
         alert("Your ad is submitted successfully");
-        const navigate = useNavigate("");
-        navigate("/");
+        this.setState({isSubmitted: true})
       } else {
         const data = await response.json();
         console.log(data);
@@ -58,7 +58,11 @@ class JobForm extends Component {
   };
 
   render() {
+    const { isSubmitted} = this.state
     return (
+      <>
+      {isSubmitted && <Navigate to="/" />}
+      
       <div className="job-form-main-container">
         <form className="job-form-sub-container" onSubmit={this.handleJobForm}>
           <h1 className="job-form-main-heading">Post a Job</h1>
@@ -163,6 +167,7 @@ class JobForm extends Component {
           </button>
         </form>
       </div>
+      </>
     );
   }
 }

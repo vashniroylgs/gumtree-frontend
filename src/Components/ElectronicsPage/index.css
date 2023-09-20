@@ -151,12 +151,10 @@
 }
 
 .electronics-card-image {
-  min-height: 150px;
-  min-width: 150px;
-  max-height: 150px;
-  max-width: 150px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
 }
 .electronics-right-section {
   margin-top: 20px;
