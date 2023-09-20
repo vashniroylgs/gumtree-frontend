@@ -204,7 +204,6 @@ function Electronics() {
               <AiOutlineLeft /> For Sale
             </p>
             <p>Appliances</p>
-
             {categoryList.map((eachCatagorey) => (
               <div key={eachCatagorey.id} className="electronics-category-list">
                 <p className="electronics-category-item-name">
