@@ -1694,7 +1694,9 @@ function CarPage() {
                           XXXXXX
                           </span> */}
                       </div>
-                      <p className="porperty-card-content-conatiner-location"></p>
+                      <p className="porperty-card-content-conatiner-location">
+                 
+                      </p>
                       <div className="porperty-card-content-conatiner-cost">
                         <p className="porperty-card-content-conatiner-cost-item">
                           {property.price}
