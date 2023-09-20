@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import {
   AiOutlineBell,
@@ -1551,7 +1550,7 @@ const carsDetails = [
 function CarPage() {
   const { carDetail } = useParams();
   const [automobiles, setAutomobiles] = useState([]);
-  console.log(automobiles)
+  console.log(automobiles);
   useEffect(() => {
     // Fetch data from your server when the component mounts
     fetch(`http://localhost:3009/getautomobiles/${carDetail}`)
@@ -1686,24 +1685,22 @@ function CarPage() {
                       </div>
                       <div className="porperty-card-content-conatiner-list-elements">
                         <span className="porperty-card-content-conatiner-list-element">
-                        {property.selectedCar}
+                          {property.selectedCar}
                         </span>
                         <span className="porperty-card-content-conatiner-list-element">
-                        {property.features}
+                          {property.features}
                         </span>
-                          {/* <span className="porperty-card-content-conatiner-list-element">
+                        {/* <span className="porperty-card-content-conatiner-list-element">
                           XXXXXX
                           </span> */}
                       </div>
-                      <p className="porperty-card-content-conatiner-location">
-                        XXXXXX
-                      </p>
+                      <p className="porperty-card-content-conatiner-location"></p>
                       <div className="porperty-card-content-conatiner-cost">
                         <p className="porperty-card-content-conatiner-cost-item">
                           {property.price}
                         </p>
                         <p className="porperty-card-content-conatiner-time-item">
-                        {property.selectedCar}
+                          {property.selectedCar}
                         </p>
                       </div>
                     </div>
