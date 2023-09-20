@@ -181,6 +181,9 @@
 .porperty-card-image-conatiner {
   height: 100%;
   width: 250px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .porperty-card-image-conatiner-image {
@@ -188,6 +191,7 @@
   max-height: 100%; 
   display: block;
   margin: auto;
+  padding: 10px;
 }
 .porperty-card-content-conatiner {
   display: flex;
