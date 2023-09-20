@@ -308,7 +308,7 @@ class AutomobilesUploadForm extends Component {
                 <p className="upload-form-contact-details-sub-heading">
                   Your Contact Name:{" "}
                   <span className="upload-form-contact-details-sub-heading-span">
-                    Vashni Roy
+                    Raju
                   </span>
                 </p>
                 <p className="upload-form-contact-details-sub-heading">
@@ -320,7 +320,7 @@ class AutomobilesUploadForm extends Component {
                 <p className="upload-form-contact-details-sub-heading">
                   Email:{" "}
                   <span className="upload-form-contact-details-sub-heading-span">
-                    vashniroy@gmail.com
+                    lgs@gmail.com
                   </span>
                 </p>
                 <p className="upload-form-contact-details-sub-heading">
