@@ -1717,6 +1717,8 @@ function CarDetailedView() {
             <p className="car-detailed-view-description">
               {automobiles.description}
             </p>
+            <h1 className="car-detailed-view-description-heading">Features</h1>
+            <p>{automobiles.features}</p>
           </div>
           <div className="upload-form-contact-details-container">
             <p className="upload-form-contact-details-sub-heading">

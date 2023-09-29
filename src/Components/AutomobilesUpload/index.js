@@ -151,7 +151,7 @@ class AutomobilesUploadForm extends Component {
       .then((data) => {
         console.log(data); // Handle the response data as needed
         alert("Your Ad posted successfully");
-        this.setState({ isSelected: true });
+        this.setState({ isSelected: false });
       })
       .catch((error) => {
         console.error(error);
