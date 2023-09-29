@@ -130,7 +130,10 @@
   .upload-from-vehicle-features-list {
     list-style: none;
     width: 30%;
-    padding: 10px;
+    display:flex;
+    align-items:center;
+    gap:4px;
+
   }
   
   .upload-form-list-container {
@@ -147,8 +150,7 @@
     flex-wrap: wrap;
   }
   
-  .upload-form-list-label {
-    padding: 6px 0 6px 10px;
+  .upload-form-list-label-text {
     min-width: 32px;
     min-height: 32px;
     position: relative;

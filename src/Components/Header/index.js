@@ -48,10 +48,12 @@ function Header() {
               <span className="headerOptionPara">Sell</span>
             </div>
           </Link>
+          <Link to="/login">
           <div className="header__optionBasket">
             <CiUser className="headerOptionsIcon" />
             <span className="headerOptionPara">Login/Register</span>
           </div>
+          </Link>
         </div>
       </div>
     </div>

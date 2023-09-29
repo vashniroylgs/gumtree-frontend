@@ -73,6 +73,10 @@
   color: rgb(99, 91, 103);
   font-size: 12px;
 }
+.automobile-upload-select{
+  border-radius:4px;
+  padding:4px 10px;
+}
 .upload-form-image-first-container {
   display: flex;
   gap: 10px;
@@ -130,7 +134,9 @@
 .upload-from-vehicle-features-list {
   list-style: none;
   width: 30%;
-  padding: 10px;
+  display:flex;
+  align-items: center;
+  gap:4px;
 }
 
 .upload-form-list-container {
@@ -148,7 +154,7 @@
 }
 
 .upload-form-list-label {
-  padding: 6px 0 6px 10px;
+  
   min-width: 32px;
   min-height: 32px;
   position: relative;

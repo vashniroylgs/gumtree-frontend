@@ -20,6 +20,8 @@ import ElectronicsUploadForm from "./Components/Electronicsupload";
 import FreelanceForm from "./Components/Freelanceupload";
 import DetailedView from "./Components/DetailedView";
 import FreelanceDetailedView from "./Components/FreelanceDetailView";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
 function App() {
   return (
     <>
@@ -34,6 +36,8 @@ function App() {
         <Route exact path="/jobs" Component={JobSectionMain} />
         <Route exact path="/automobiles/:carDetail" Component={CarPage} />
         <Route exact path="/jobform" Component={JobForm} />
+        <Route exact path="/login" Component={Login} />
+        <Route exact path="/signup" Component={Signup} />
         <Route
           exact
           path="/automobiles/carDetails/:id"

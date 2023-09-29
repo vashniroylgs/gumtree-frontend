@@ -209,10 +209,11 @@ class AutomobilesUploadForm extends Component {
               </div>
             </div>
             <div>
-              <h2>Select a Car:</h2>
+              <h2 >Select a Car:</h2>
               <select
                 value={this.state.selectedCar}
                 onChange={this.handleCarChange}
+                className="automobile-upload-select"
               >
                 {carDetails.map((each) => (
                   <option value={each.name}>{each.name}</option>
@@ -258,7 +259,7 @@ class AutomobilesUploadForm extends Component {
                       )}
                       onChange={this.toggleCheckbox}
                     />
-                    <label className="upload-form-list-label">
+                    <label className="upload-form-list-label-text">
                       {eachFeature.feature}
                     </label>
                   </li>
