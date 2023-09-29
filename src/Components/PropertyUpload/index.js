@@ -250,7 +250,7 @@ export class PropertyUploadForm extends Component {
                       onChange={this.toggleCheckbox}
                       name="direction"
                     />
-                    <label className="upload-form-list-label">
+                    <label className="upload-form-list-label-text">
                       {eachFeature.feature}
                     </label>
                   </li>

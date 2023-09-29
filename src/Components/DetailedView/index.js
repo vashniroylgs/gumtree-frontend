@@ -1641,7 +1641,6 @@ function DetailedView() {
   const [carouselimages, setCarouselImgaes] = useState([]);
   const singleCar = carsDetails.filter((car) => car.id == id);
   const { title, Company, Description, images, carLocation } = singleCar[0];
-  console.log(carouselimages);
   useEffect(() => {
     fetch(`http://localhost:3009/${category}/${id}`)
       .then((response) => response.json())
@@ -1654,6 +1653,8 @@ function DetailedView() {
         console.error("Error fetching data:", error);
       });
   }, []);
+
+  console.log(automobiles)
 
   return (
     <div className="car-detailed-view-main-container">
@@ -1708,6 +1709,18 @@ function DetailedView() {
               ))}
             </Slider>
           </div>
+          <div className="car-detailed-view-details-container">
+          
+          <div className="car-detail-view-location-container">
+            <span className="car-detail-view-salary-heading mr-2">Device-Type:</span>
+            <p>{automobiles.devicetype}</p>
+          </div>
+        
+          <div className="car-detail-view-location-container">
+            <span className="car-detail-view-salary-heading mr-2">Price:</span>
+            <p>{automobiles.price}</p>
+          </div>
+        </div>
           <div>
             <h1 className="car-detailed-view-description-heading">
               Description

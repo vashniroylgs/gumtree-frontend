@@ -14,18 +14,29 @@
   width: 50%;
 }
 
+.post-an-add-text{
+  font-size:32px;
+  color:#222;
+  font-family:"Roboto";
+  font-weight:600;
+}
 
 .select-category-homepage-para {
   font-weight: bold;
 }
-
+.select-category-dropdown-container{
+  display:flex;
+  gap:20px;
+}
 .select-category-dropdown-input{
-    height: 50px;
+    height: 40px;
     width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
+    border-radius:4px;
+    padding:0px 10px;
 }
 
 .category-submit-btnn {

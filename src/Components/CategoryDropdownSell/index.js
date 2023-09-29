@@ -29,11 +29,14 @@ const PostAdCategory = () => {
   return (
     <div className="select-category-homepage">
       <div className="select-category-mini-container">
-        <h1>Post an Ad</h1>
+        <h1 className="post-an-add-text">Post an Ad</h1>
         <h4>Category</h4>
         <p className="select-category-homepage-para">
           Tell us what you are posting:
         </p>
+        <div className="select-category-dropdown-container">
+
+        
         <select
           className="select-category-dropdown-input"
           onChange={updateCategory}
@@ -48,6 +51,7 @@ const PostAdCategory = () => {
         <button onClick={submitCategory} className="category-submit-btnn">
           Continue
         </button>
+        </div>
       </div>
     </div>
   );
