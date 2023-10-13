@@ -39,6 +39,9 @@ const HouseDetails = [
     propertyDetail: "3BHK",
   },
 ];
+
+let conditionItems = ['1','2','3','4','5','6','7','8','9','0','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'zero'];
+
 export class PropertyUploadForm extends Component {
   state = {
     direction: "",
@@ -50,6 +53,7 @@ export class PropertyUploadForm extends Component {
     selectedPropertyType: "",
     selectedPropertyLevel: "",
     isSubmitted: false,
+    error: '', 
   };
 
   takePrice = (event) => {
@@ -62,8 +66,34 @@ export class PropertyUploadForm extends Component {
   };
   takeDescription = (event) => {
     event.preventDefault();
-    this.setState({ description: event.target.value });
+    const count = this.checkError();
+    if(count > 3){
+      console.log("called")
+      this.setState({description:""})
+      this.setState({error:'dont use number'})
+    }else{
+      this.setState({ description: event.target.value });
+      this.setState({error:''})
+    }
   };
+  
+ checkError=()=>{
+  const { description } = this.state;
+  let splitText = description.split(' '); 
+    let counter = 0
+    for(let i of splitText){      
+      for (let j of conditionItems){       
+        if(i.includes(j)){
+          counter+=1
+        }
+      }
+    }
+  // console.log(description)
+  //   if(counter>1){
+      
+  //   }
+    return counter;   
+  }
 
   showAll = () => {
     this.setState({ showMore: !this.state.showMore });
@@ -138,6 +168,11 @@ export class PropertyUploadForm extends Component {
         console.error(error);
       });
   };
+   
+
+  errorChecking=()=>{
+    this.setState({error:""})
+  }
 
   render() {
     const {
@@ -145,22 +180,23 @@ export class PropertyUploadForm extends Component {
       description,
       price,
       showMore,
-      direction,
       selectedPropertyType,
-      selectedPropertyLevel,
       isSubmitted,
+      error
     } = this.state;
+
+    if(error.length>1){
+      this.checkError()
+      
+    }
+    
     const showMoreClassName = showMore
       ? "upload-form-list-container-show-more"
       : "upload-form-list-container";
     console.log(
-      selectedPropertyType,
-      title,
-      direction,
-      price,
-      description,
-      selectedPropertyLevel
+      description,error
     );
+    
     return (
       <>
         {isSubmitted && <Navigate to="/" />}
@@ -279,6 +315,7 @@ export class PropertyUploadForm extends Component {
                 value={description}
               ></textarea>
             </div>
+            {error && <p>{error}</p>}
             <div className="upload-form-price-container">
               <h3 className="upload-form-vehicle-container-heading">Price *</h3>
               <div className="upload-form-price-input-container">
